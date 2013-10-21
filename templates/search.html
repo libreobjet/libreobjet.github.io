@@ -1,0 +1,15 @@
+{% include 'partials/header.html' %}
+  <div class="content search">
+      <form action="/search">
+        <input type="text" value="{{ page.query.q }}" name="q" id="search-field" autocomplete="off" spellcheck="false" />
+      </form>
+      {% set results = search(page.query.q) %}
+      {% for result in results %}
+        <a href="{{ result.url }}">
+          <h2>{{ result.title }}</h2>
+          <p>{{ result.search_match }}</p>
+        </a>
+        <hr>
+      {% endfor %}
+  </div>
+{% include 'partials/footer.html' %}
