@@ -7,3 +7,7 @@ app/_cache/images/*
 !app/_cache/images/.gitignore
 
 logs
+=======
+/app/_cache/
+/public/archives/
+
