@@ -1,0 +1,5 @@
+{
+    "require": {
+        "alchemy/zippy": " ~0.1"
+    }
+}

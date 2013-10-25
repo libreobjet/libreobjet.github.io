@@ -1,5 +1,9 @@
 <?php
- 
+
+// Load composer
+require realpath('../vendor/autoload.php');
+var_dump(realpath('../vendor/autoload.php'));
+
 if (!isset($_GET['zipname'])) {
 exit('Error'); // Pas de nom de projet
 }
@@ -7,7 +11,7 @@ exit('Error'); // Pas de nom de projet
 $name = $_GET['zipname'];
  
 // Content dir
-$content = __DIR__.'/../content';
+$content = __DIR__.'/../content/1.objects';
  
 // Remove ../, ./, etc. in path
 // http://php.net/manual/en/function.realpath.php
@@ -42,10 +46,13 @@ $found_project = array($name, $project_path);
 }
  
 if ($found_project === NULL) {
-echo ($projects);
 exit('Error'); // No project found
 }
  
 // Make zip
-$autoload_path = __DIR__.'/../vendor/autoload.php';
+
+use Alchemy\Zippy\Zippy;
+$zippy = Zippy::load();
+
+$archive = $zippy->create('archive.zip');
 ?>
