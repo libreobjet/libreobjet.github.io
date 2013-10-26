@@ -403,6 +403,8 @@ header .nav {
 }
 .textonly {
   padding: 80px 40px;
+  width: 100%;
+  max-width: 800px;
 }
 .pagination {
   margin: 20px 20px 0 20px;
