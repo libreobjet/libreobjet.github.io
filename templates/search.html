@@ -1,15 +1,38 @@
 {% include 'partials/header.html' %}
-  <div class="content search">
+  <div class="content list search">
+    <div class="highlight">
       <form action="/search">
-        <input type="text" value="{{ page.query.q }}" name="q" id="search-field" autocomplete="off" spellcheck="false" />
+        <input type="text" value="{{ page.query.q }}" name="q" id="search-field" placeholder="search term" autocomplete="off" spellcheck="false" /><button>✔</button>
       </form>
-      {% set results = search(page.query.q) %}
-      {% for result in results %}
-        <a href="{{ result.url }}">
-          <h2>{{ result.title }}</h2>
+    </div>
+    {% set results = search(page.query.q) %}
+    {% if results %}
+    <div class="project-list">
+    {% for result in results %}
+      <div class="object-box {{ result.id }}">
+        <div class="object-image">
+          <a href="{{ result.url }}">
+           <img src="{{resize_path(result.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ result.object_name }}">
+          </a>
+        </div>
+        <div class="object-meta">
+          <p class="object-name">
+            <a href="{{ result.url }}">{{ result.object_name }}</a>
+          </p>
+          {% if result.designer %}
+          <p class="object-designer">
+            By <a href="{{ result.root_path }}/search?q={{ result.designer }}">{{ result.designer }}</a>
+          </p>
           <p>{{ result.search_match }}</p>
-        </a>
-        <hr>
-      {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    {% else %}
+      <div class="textonly">
+        <p>Nothihg was found.</p>
+      </div>
+    {% endif %}
   </div>
 {% include 'partials/footer.html' %}

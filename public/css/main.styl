@@ -18,14 +18,16 @@ header
   padding 50px 0 70px 40px
   h1
     float left
-  .logo 
-    width 213px
-    height auto
-    position relative
-    top -4px
+    a:hover
+      border none
+    .logo 
+      width 218px
+      height auto
+      position relative
+      top -4px
   .nav 
     float left
-    margin-left 270px
+    margin 4px 0 0 230px
 .nav li, .pagination li 
   display block
   float left
@@ -44,6 +46,7 @@ header
   h1 
     margin 0 0 20px 0
   li 
+    list-style-type none
     &:before 
       content "—"
       padding 0 20px 0 0
@@ -82,7 +85,7 @@ header
   .object-box
     .object-meta
       .object-name
-        margin 110px 0 80px 80px
+        margin 130px 0 80px 80px
         font-size 30px
         font-weight bold
         font-family sans
@@ -96,7 +99,7 @@ header
     .object-image
       border-bottom 1px solid color1
     .object-meta
-      width 500px
+      width 400px
     .object-content
       width 500px
       float left
@@ -106,6 +109,24 @@ header
           background color1
           padding 5px
           color white
+
+// Search page
+
+.content.search
+  .highlight
+    input, button
+      border 1px solid white
+      background transparent
+      color white
+      padding 3px 5px
+    button
+      border-left none
+      padding 3px 10px
+
+// Content pages
+
+.textonly
+  padding 80px 40px
 
 .pagination 
   margin 20px 20px 0 20px
@@ -119,7 +140,8 @@ footer
 a 
   color color1
   text-decoration none
-  transition color .3s
+  transition color .1s
   &:hover
     color black
+    border-bottom 2px solid black
 
