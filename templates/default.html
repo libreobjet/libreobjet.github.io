@@ -1,20 +1,32 @@
 {% include 'partials/header.html' %}
-  <div class="content">
+  <div class="content list home">
+    <div class="highlight">
+      {{ page.home_highlight }}
+    </div>
     {% for child in page.root %}
-      {% if child.children %}
-        <ul class="projects">
-        {% for child in child.children %}
-          <li class="col {{ child.id }}">
-            <h2>
-              {% if child.thumb %}
-                <img src="{{resize_path(child.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="">
-              {% endif %}
-              <a href="{{ child.url }}">{{ child.object_name }}</a>
-            </h2>
-          </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endfor %}
+    {% if child.children %}
+    <div class="project-list">
+      {% for child in child.children %}
+      <div class="object-box {{ child.id }}">
+        <div class="object-image">
+          <a href="{{ child.url }}">
+           <img src="{{resize_path(child.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ child.object_name }}">
+          </a>
+        </div>
+        <div class="object-meta">
+          <p class="object-name">
+            <a href="{{ child.url }}">{{ child.object_name }}</a>
+          </p>
+          {% if child.designer %}
+          <p class="object-designer">
+            By <a href="{{ child.root_path }}/search?q={{ child.designer }}">{{ child.designer }}</a>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% endfor %}
   </div>
 {% include 'partials/footer.html' %}

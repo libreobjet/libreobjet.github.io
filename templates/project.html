@@ -1,63 +1,59 @@
 {% include 'partials/header.html' %}
-
-  <div class="content project">
-
-<div class="object-box">
-  <div class="object-image">
-     <img src="{{resize_path(page.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ page.object_name }}">
-  </div>
-  <div class="object-meta">
-    <p class="object-name">
-      Name: {{ page.object_name }}
-    </p>
-    {% if page.designer %}
-    <p class="object-designer">
-      Designer: <a href="{{ page.root_path }}/search?q={{ page.designer }}">{{ page.designer }}</a>
-    </p>
-    {% endif %}
-    {% if page.builder %}
-    <p class="object-builder">
-      Builder: <a href="{{ page.root_path }}/search?q={{ page.builder }}">{{ page.builder }}</a>
-    </p>
-    {% endif %}
-    {% if page.contributor %}
-    <p class="contributors">
-      Contributor: {{ page.contributors }}
-    </p>
-    {% endif %}
-    {% if page.realisation_place %}
-    <p class="realisation-place">
-      Realisation place: <a href="{{ page.root_path }}/search?q={{ page.realisation-place }}">{{ page.realisation_place }}</a>
-    </p>
-    {% endif %}
-    {% if page.required_hardware %}
-    <p class="required-hardware">
-      Required hardware: {{ page.required_hardware }}
-    </p>
-    {% endif %}
-    {% if page.derived-from %}
-    <p class="derived-from">
-      Object derived from: {{ page.derived_from }}
-    </p>
-    {% endif %}
-    {% if page.client %}
-    <p class="client">
-      Client: <a href="{{ page.root_path }}/search?q={{ page.client }}">{{ page.client }}</a>
-    </p>
-    {% endif %}
-    <p class="object-license">
-      Licence: <a href="{{ page.root_path }}/search?q={{ page.license }}">{{ page.license }}</a>
-    </p>
-    <p class="creation-date">
-      Design date: {{ page.creation_date }}
-    </p>
-  </div>
-  <div class="object-content">
-    <p class="download"><a href="{{ page.root_path }}extensions/zipmaker.php?zipname={{ page.slug }}">Download</a> this object’s package containing sources and building instructions.</p>
-    {{ page.content }}
-  </div>
-</div>
-
-
-</div>
+      <div class="content single">
+        <div class="object-box">
+          <div class="object-image">
+             <img src="{{resize_path(page.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ page.object_name }}">
+          </div>
+          <div class="object-meta">
+            <p class="object-name">
+              Name: {{ page.object_name }}
+            </p>
+            {% if page.designer %}
+            <p class="object-designer">
+              Designer: <a href="{{ page.root_path }}/search?q={{ page.designer }}">{{ page.designer }}</a>
+            </p>
+            {% endif %}
+            {% if page.builder %}
+            <p class="object-builder">
+              Builder: <a href="{{ page.root_path }}/search?q={{ page.builder }}">{{ page.builder }}</a>
+            </p>
+            {% endif %}
+            {% if page.contributor %}
+            <p class="contributors">
+              Contributor: {{ page.contributors }}
+            </p>
+            {% endif %}
+            {% if page.realisation_place %}
+            <p class="realisation-place">
+              Realisation place: <a href="{{ page.root_path }}/search?q={{ page.realisation-place }}">{{ page.realisation_place }}</a>
+            </p>
+            {% endif %}
+            {% if page.required_hardware %}
+            <p class="required-hardware">
+              Required hardware: {{ page.required_hardware }}
+            </p>
+            {% endif %}
+            {% if page.derived-from %}
+            <p class="derived-from">
+              Object derived from: {{ page.derived_from }}
+            </p>
+            {% endif %}
+            {% if page.client %}
+            <p class="client">
+              Client: <a href="{{ page.root_path }}/search?q={{ page.client }}">{{ page.client }}</a>
+            </p>
+            {% endif %}
+            <p class="object-license">
+              Licence: <a href="{{ page.root_path }}/search?q={{ page.license }}">{{ page.license }}</a>
+            </p>
+            <p class="creation-date">
+              Design date: {{ page.creation_date }}
+            </p>
+          </div>
+          <div class="object-content">
+            <p class="download"><a href="{{ page.root_path }}extensions/zipmaker.php?zipname={{ page.slug }}">Download</a> this object’s package. <br/> It containing sources and building instructions.</p>
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
 {% include 'partials/footer.html' %}

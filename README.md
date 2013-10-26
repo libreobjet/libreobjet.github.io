@@ -2,9 +2,18 @@
 
 Built with <a href="http://staceyapp.com/">Stacey</a>.
 
-## How to use this website?
+## How to post a new design
 
-In progress…
+You can submit your object you design to the Libre Objet’s team.
+To be published on the website, be sure it match with the following requirements:
+
+*requirement list*
+
+## Install
+
+1. Download or clone the content of this repository
+2. Create a public/archives folder that must be writable
+3. Launch the website in your browser
 
 ## Requirements
 
