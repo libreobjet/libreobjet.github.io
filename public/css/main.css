@@ -313,8 +313,8 @@ header .nav {
   color: #fff;
   padding: 50px 0;
   text-align: center;
-  font-size: 30px;
-  line-height: 1.3em;
+  font: bold 30px/1.3em Raleway, arial, sans-serif;
+  font-weight: 600;
 }
 .content h1 {
   margin: 0 0 20px 0;
@@ -363,11 +363,14 @@ header .nav {
 .object-box .object-content .download {
   margin-bottom: 20px;
 }
+.content.list .object-box .object-meta {
+  padding: 0;
+  width: calc(100% - 600px);
+}
 .content.list .object-box .object-meta .object-name {
   margin: 130px 0 80px 80px;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: Raleway, arial, sans-serif;
+  font: bold 30px/1.3em Raleway, arial, sans-serif;
+  text-align: center;
 }
 .content.list .object-box .object-meta .object-designer {
   display: none;
@@ -428,4 +431,12 @@ a {
 a:hover {
   color: #000;
   border-bottom: 2px solid #000;
+}
+::selection {
+  background: #eaeaea;
+  color: #00bd00;
+}
+::-moz-selection {
+  background: #eaeaea;
+  color: #00bd00;
 }
