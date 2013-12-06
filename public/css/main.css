@@ -293,10 +293,10 @@ header h1 a:hover {
   border: none;
 }
 header h1 .logo {
-  width: 218px;
+  width: 214px;
   height: auto;
   position: relative;
-  top: -4px;
+  top: -22px;
 }
 header .nav {
   float: left;
