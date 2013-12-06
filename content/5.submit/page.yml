@@ -2,3 +2,21 @@ title: Submit an object
 content: |    
     You can submit your object you design to the Libre Objet’s team.
     To be published on the website, be sure it match with the following requirements:
+    
+    ## Directory architecture
+        
+    - name-of-the-project/ ** The name of your poject, no spaces, capital, neither special characters **
+      - sources/
+        - 3d/ ** 3D source files **
+        - 2d/ ** 2D source files **
+        - guide/ ** Source file of the pdf guide **
+      - images/ ** Photographs and drawing ** 
+      - project.yml ** The only .yml file, see “Content of the .yml file” **
+      - guide-fr.pdf ** Language must be defined ex. guide-en.pdf **
+      - license.txt ** Contains the chosen licence text **
+      - thumb.png ** The featured image of your project **
+
+    ## Content of the .yml file
+    
+    The .yml file describes the object in details in a YAML format.
+    You can see an example of this file above:
