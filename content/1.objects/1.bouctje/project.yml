@@ -7,7 +7,7 @@ creation_date: 01-2013
 contributors: none
 derived_from: none
 realisation_place: Brussels
-required_hardware: hand saw, circular saw, drill driver, drill bit 3mm, sander, sand paper
+required_hardware: [hand saw, circular saw, drill driver, drill bit 3mm, sander, sand paper]
 license: Free Art Licence
 client: Mathieu Gabiot
 
