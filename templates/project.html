@@ -1,26 +1,59 @@
 {% include 'partials/header.html' %}
       <div class="content single">
+        <div class="highlight">
+        {{ page.object_name }}
+        </div>
         <div class="object-box">
+          {% if page.thumb %}
           <div class="object-image">
              <img src="{{resize_path(page.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ page.object_name }}">
           </div>
+            {% else %}
+          <div class="object-image noimage">
+          </div>
+            {% endif %}
           <div class="object-meta">
             <p class="object-name">
               Name: {{ page.object_name }}
             </p>
             {% if page.designer %}
             <p class="object-designer">
-              Designer: <a href="{{ page.root_path }}/search?q={{ page.designer }}">{{ page.designer }}</a>
+              Designer:
+              {% if page.designer[0] is defined %}
+                {% for name in page.designer %}
+                <a href="{{ page.root_path }}search?q={{ name }}">{{ name }}</a>.
+                {% endfor %}
+              {% else %}
+              <a href="{{ page.root_path }}search?q={{ page.designer }}">{{ page.designer }}</a> .
+              {% endif %}
             </p>
             {% endif %}
             {% if page.builder %}
             <p class="object-builder">
-              Builder: <a href="{{ page.root_path }}/search?q={{ page.builder }}">{{ page.builder }}</a>
+              Builder: 
+              {% if page.builder[0] is defined %}
+                {% for name in page.builder %}
+                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                {% endfor %}
+              {% else %}
+              <a href="{{ page.root_path }}search?q={{ page.builder }}">{{ page.builder }}</a> .
+              {% endif %}
             </p>
             {% endif %}
+            {% if page.origninal_designer %}
+            <p class="origninal_designer">
+              Original designer / author: <a href="{{ page.root_path }}/search?q={{ page.origninal_designe }}">{{ page.origninal_designer }}</a> |
+            </p>
+            {% endif %}            
             {% if page.contributor %}
             <p class="contributors">
-              Contributor: {{ page.contributors }}
+              {% if page.contributor[0] is defined %}
+                {% for name in page.contributor %}
+                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                {% endfor %}
+              {% else %}
+              <a href="{{ page.root_path }}search?q={{ page.contributor }}">{{ page.contributor }}</a> .
+              {% endif %}
             </p>
             {% endif %}
             {% if page.realisation_place %}
@@ -30,12 +63,51 @@
             {% endif %}
             {% if page.required_hardware %}
             <p class="required-hardware">
-              Required hardware: {{ page.required_hardware }}
+              Required hardware: 
+              {% if page.required_hardware[0] is defined %}
+                {% for name in page.required_hardware %}
+                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                {% endfor %}
+              {% else %}
+              <a href="{{ page.root_path }}search?q={{ page.required_hardware }}">{{ page.required_hardware }}</a> .
+              {% endif %}
             </p>
             {% endif %}
             {% if page.derived-from %}
             <p class="derived-from">
               Object derived from: {{ page.derived_from }}
+            </p>
+            {% endif %}
+            {% if page.materials %}
+            <p class="materials">
+              Materials: 
+              {% if page.materials[0] is defined %}
+                {% for name in page.materials %}
+                  <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                {% endfor %}
+              {% else %}
+              <a href="{{ page.root_path }}search?q={{ page.materials }}">{{ page.materials }}</a> .
+              {% endif %}
+            </p>
+            {% endif %}
+            {% if page.advantage %}
+            <p class="advantage">
+              Advantage: {{ page.advantage }}
+            </p>
+            {% endif %}
+            {% if page.disadvantage %}
+            <p class="disadvantage">
+              Disadvantage: {{ page.disadvantage }}
+            </p>
+            {% endif %}
+            {% if page.terms_of_use %}
+            <p class="terms_of_use">
+              Terms of use: {{ page.terms_of_use }}
+            </p>
+            {% endif %}
+            {% if page.improvement %}
+            <p class="improvement">
+              Improvement: {{ page.improvement }}
             </p>
             {% endif %}
             {% if page.client %}
@@ -51,7 +123,8 @@
             </p>
           </div>
           <div class="object-content">
-            <p class="download"><a href="{{ page.root_path }}extensions/zipmaker.php?zipname={{ page.slug }}">Download</a> this object’s package. <br/> It containing sources and building instructions.</p>
+            <p class="download"><a href="{{ page.root_path }}extensions/zipmaker.php?zipname={{ page.slug }}">Download</a></p>
+            <p class="dlintro">This package contains all you need to build or modify the object.</p>
             {{ page.content }}
           </div>
         </div>

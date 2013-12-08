@@ -12,6 +12,7 @@ RewriteCond %{REQUEST_URI} !public/
 RewriteCond %{DOCUMENT_ROOT}/public/$1.$2 !-f
 RewriteRule (.+)\.(html|json|xml|atom|rss|rdf|txt)$ $1/ [L]
 
+
 # Add a trailing slash to directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -40,7 +41,8 @@ RewriteRule ^(.+)$ public/$1 [L]
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 
 # Prevent access to .txt & .yml files
-RedirectMatch 404 \.(txt|yml)$
+# RedirectMatch 404 \.(txt|yml)$
+RedirectMatch 404 \.(yml)$
 
 # Increase cookie security
 <IfModule php5_module>

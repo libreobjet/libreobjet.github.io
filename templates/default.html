@@ -8,11 +8,16 @@
     <div class="project-list">
       {% for child in child.children %}
       <div class="object-box {{ child.id }}">
+        {% if child.thumb %}
         <div class="object-image">
           <a href="{{ child.url }}">
            <img src="{{resize_path(child.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ child.object_name }}">
           </a>
         </div>
+          {% else %}
+        <div class="object-image noimage">
+        </div>
+          {% endif %}      
         <div class="object-meta">
           <p class="object-name">
             <a href="{{ child.url }}">{{ child.object_name }}</a>

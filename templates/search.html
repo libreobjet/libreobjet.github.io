@@ -10,20 +10,25 @@
     <div class="project-list">
     {% for result in results %}
       <div class="object-box {{ result.id }}">
-        <div class="object-image">
+        <div class="object-image noimage">
           <a href="{{ result.url }}">
+<!--
            <img src="{{resize_path(result.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ result.object_name }}">
+-->
           </a>
         </div>
         <div class="object-meta">
           <p class="object-name">
             <a href="{{ result.url }}">{{ result.object_name }}</a>
+            <a href="{{ result.url }}">{{ result.title }}</a>
           </p>
           {% if result.designer %}
           <p class="object-designer">
             By <a href="{{ result.root_path }}/search?q={{ result.designer }}">{{ result.designer }}</a>
           </p>
+<!--
           <p>{{ result.search_match }}</p>
+-->
           {% endif %}
         </div>
       </div>

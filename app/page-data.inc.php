@@ -106,7 +106,7 @@ Class PageData {
     # page.root_path
     $page->root_path = Helpers::relative_root_path();
     # page.thumb
-    $page->thumb = self::get_thumbnail($page->file_path);
+    $page->thumb = self::get_thumbnail($page->file_path.'/images');
     # page.current_year
     $page->current_year = date('Y');
 

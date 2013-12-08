@@ -11,8 +11,21 @@
   <body>
     <header>
       <h1><a class="brand" href="{{ page.root_path }}">
-        <img class="logo" src="{{ page.root_path }}/public/img/libreobjet-logo-1.svg" alt="{{ page.name }} Logo" title="Home page" width="" height="" />
-      </a></h1>
+        <img class="logo" src="{{ page.root_path }}/public/img/libreobjet-logo-5.svg" alt="{{ page.name }} Logo" title="Home page" width="" height="" />
+        {# <img class="logo" src="{{ page.root_path }}/public/img/{{ random([
+                               'libreobjet-logo-1.svg',
+                               'libreobjet-logo-2.svg',
+                               'libreobjet-logo-3.svg',
+                               'libreobjet-logo-4.svg',
+                               'libreobjet-logo-5.svg',
+                               'libreobjet-logo-6.svg',
+                               'libreobjet-logo-7.svg',
+                               'libreobjet-logo-8.svg',
+                               'libreobjet-logo-9.svg'
+                               ]) }}" alt="{{ page.name }} Logo" title="Home page" width="" height="" />
+          #}
+        
+        </a></h1>
 {% include 'partials/navigation.html' %}
     </header>
     <div class="container">
