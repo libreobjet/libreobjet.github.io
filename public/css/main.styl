@@ -40,17 +40,12 @@ header
   .highlight
     background color1
     color white
-    padding 50px 0
-    text-align center
+    padding 50px 0 50px 500px
+    text-align left
     font fat
     font-weight 600
-  h1 
-    margin 0 0 20px 0
-  li 
-    list-style-type none
-    &:before 
-      content "—"
-      padding 0 20px 0 0
+    border-bottom 1px solid color1
+
 
 // Object
 
@@ -60,17 +55,31 @@ header
   .object-image
     float left
     border-right 1px solid color1
+    width 501px
+    height auto
+    &.noimage
+      height 300px
+      &::after
+        content " "
+        display block
+        transform rotate(-31deg)
+        position relative
+        top 149px
+        left -41px
+        width 583px
+        border-bottom 1px solid color1        
     img
       display block
   .object-meta 
     float left
     padding 40px
     font-family mono
-    font-size 12px
+    font-size 13px
     font-weight normal
     p 
       margin 0 0 13px 0
-      line-height 15px
+      line-height 17px
+      transform scale(1, 1.1)
     li 
       display inline
   .object-content
@@ -79,6 +88,16 @@ header
     padding 40px
     .download 
       margin-bottom 20px
+.single
+  .highlight
+    background white
+    color color1
+
+// Home
+.home
+  .highlight
+    padding 50px 0
+    text-align center
 
 // Object in lists
 
@@ -102,15 +121,30 @@ header
       border-bottom 1px solid color1
     .object-meta
       width 400px
+      position relative
+      left -1px
+      border-left 1px solid color1
+      border-right 1px solid color1
     .object-content
+      border-left 1px solid color1      
       width 500px
       float left
+      position relative
+      left -2px
       .download
-        line-height 2em
         a
-          background color1
-          padding 5px
-          color white
+          border-right 1px solid color1
+          border-bottom 1px solid color1
+          padding 30px 70px
+          color color1
+          position relative
+          top -13px
+          left -40px
+          &:hover
+            color white
+            background color1
+      .dlintro
+        margin 30px 0px
 
 // Search page
 
@@ -128,16 +162,49 @@ header
 // Content pages
 
 .textonly
-  padding 80px 40px
+  padding 80px 0 0 0
+  margin 0 0 40px 502px 
   width 100%
-  max-width 800px
-
+  max-width 700px
+  p, ul
+    margin 0 0 20px 0
+  h1 
+    margin 0 0 20px 0
+  h2
+    margin 60px 0 30px 0
+    font bold 25px\/1.3em Raleway, arial, sans-serif
+    &:first-child
+      margin-top 0
+  li 
+    list-style-type none
+    margin 0 0 20px 0px
+    padding 0 0 0px 40px
+    display block
+    position relative
+    &:before
+      content "−"
+      color color1
+      position absolute
+      font-size 30px
+      top 0
+      left 0
+  em
+    color grey
+  pre
+    background-color #E3E3E3
+    padding 20px
+    font mono
+    font-weight normal
+    line-height 25px
 .pagination 
   margin 20px 20px 0 20px
+
 
 footer 
   clear both
   padding 20px 0 20px 40px
+  margin-top -1px
+  border-top 1px solid color1      
   font-family mono
   font-size 14px
   font-weight normal

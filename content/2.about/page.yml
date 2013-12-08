@@ -1,14 +1,20 @@
 title: About Libre Objet
-content: |  
-  Translation needed: As a group of industrial and graphic designers, hackers and artists, recently gathered together under the name Libre Objet, we all share a common question about open source industrial design, processes and products resulting from our work, with the aim of providing tools for accessing a free philosophy applied to the manufacture of objects.
+content: |
+  ## Libre Objet
+  As a group of industrial and graphic designers, hackers and artists, recently gathered together under the name Libre Objet, we all share a common question about open source industrial design, processes and products resulting from our work, with the aim of providing tools for accessing a free philosophy applied to the manufacture of objects.
    
   ## Members
   
-  - Raphaël Bastide
-  - Julien Deswaef
-  - Mathieu Gabiot
-  - Martin Lévêque
+  - [Raphaël Bastide](http://raphaelbastide.com/)
+  - [Julien Deswaef](http://xuv.be/)
+  - [Mathieu Gabiot](http://www.mathieu-g.be/)
+  - [Martin Lévêque](http://www.behance.net/martinleveque)
 
   ## Contact
   
-  hello@libreobjet.org
+  [hello@libreobjet.org](mailto:hello@libreobjet.org)
+  [Open Source Design mailing list](https://listes.domainepublic.net/listinfo/opensourcedesign)
+
+  ## About this website
+  
+  This website was built using [Stacey](http://staceyapp.com/). An image of this website is available on [GitHub](https://github.com/libreobjet/libreobjet.org). Any question or ideas can be discussed on the GitHub’s [issue page](https://github.com/libreobjet/libreobjet.org/issues) or by [email](mailto:hello@libreobjet.org).

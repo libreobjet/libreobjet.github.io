@@ -311,20 +311,11 @@ header .nav {
 .content .highlight {
   background: #00bd00;
   color: #fff;
-  padding: 50px 0;
-  text-align: center;
+  padding: 50px 0 50px 500px;
+  text-align: left;
   font: bold 30px/1.3em Raleway, arial, sans-serif;
   font-weight: 600;
-}
-.content h1 {
-  margin: 0 0 20px 0;
-}
-.content li {
-  list-style-type: none;
-}
-.content li:before {
-  content: "—";
-  padding: 0 20px 0 0;
+  border-bottom: 1px solid #00bd00;
 }
 .object-box {
   border-bottom: 1px solid #00bd00;
@@ -337,6 +328,25 @@ header .nav {
 .object-box .object-image {
   float: left;
   border-right: 1px solid #00bd00;
+  width: 501px;
+  height: auto;
+}
+.object-box .object-image.noimage {
+  height: 300px;
+}
+.object-box .object-image.noimage::after {
+  content: " ";
+  display: block;
+  -webkit-transform: rotate(-31deg);
+  -moz-transform: rotate(-31deg);
+  -o-transform: rotate(-31deg);
+  -ms-transform: rotate(-31deg);
+  transform: rotate(-31deg);
+  position: relative;
+  top: 149px;
+  left: -41px;
+  width: 583px;
+  border-bottom: 1px solid #00bd00;
 }
 .object-box .object-image img {
   display: block;
@@ -345,12 +355,17 @@ header .nav {
   float: left;
   padding: 40px;
   font-family: cousine, courier new, monospace;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: normal;
 }
 .object-box .object-meta p {
   margin: 0 0 13px 0;
-  line-height: 15px;
+  line-height: 17px;
+  -webkit-transform: scale(1, 1.1);
+  -moz-transform: scale(1, 1.1);
+  -o-transform: scale(1, 1.1);
+  -ms-transform: scale(1, 1.1);
+  transform: scale(1, 1.1);
 }
 .object-box .object-meta li {
   display: inline;
@@ -362,6 +377,14 @@ header .nav {
 }
 .object-box .object-content .download {
   margin-bottom: 20px;
+}
+.single .highlight {
+  background: #fff;
+  color: #00bd00;
+}
+.home .highlight {
+  padding: 50px 0;
+  text-align: center;
 }
 .content.list .object-box .object-meta {
   padding: 0;
@@ -380,18 +403,33 @@ header .nav {
 }
 .content.single .object-box .object-meta {
   width: 400px;
+  position: relative;
+  left: -1px;
+  border-left: 1px solid #00bd00;
+  border-right: 1px solid #00bd00;
 }
 .content.single .object-box .object-content {
+  border-left: 1px solid #00bd00;
   width: 500px;
   float: left;
-}
-.content.single .object-box .object-content .download {
-  line-height: 2em;
+  position: relative;
+  left: -2px;
 }
 .content.single .object-box .object-content .download a {
-  background: #00bd00;
-  padding: 5px;
+  border-right: 1px solid #00bd00;
+  border-bottom: 1px solid #00bd00;
+  padding: 30px 70px;
+  color: #00bd00;
+  position: relative;
+  top: -13px;
+  left: -40px;
+}
+.content.single .object-box .object-content .download a:hover {
   color: #fff;
+  background: #00bd00;
+}
+.content.single .object-box .object-content .dlintro {
+  margin: 30px 0px;
 }
 .content.search .highlight input,
 .content.search .highlight button {
@@ -405,9 +443,49 @@ header .nav {
   padding: 3px 10px;
 }
 .textonly {
-  padding: 80px 40px;
+  padding: 80px 0 0 0;
+  margin: 0 0 40px 502px;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
+}
+.textonly p,
+.textonly ul {
+  margin: 0 0 20px 0;
+}
+.textonly h1 {
+  margin: 0 0 20px 0;
+}
+.textonly h2 {
+  margin: 60px 0 30px 0;
+  font: bold 25px/1.3em Raleway, arial, sans-serif;
+}
+.textonly h2:first-child {
+  margin-top: 0;
+}
+.textonly li {
+  list-style-type: none;
+  margin: 0 0 20px 0px;
+  padding: 0 0 0px 40px;
+  display: block;
+  position: relative;
+}
+.textonly li:before {
+  content: "−";
+  color: #00bd00;
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  left: 0;
+}
+.textonly em {
+  color: #808080;
+}
+.textonly pre {
+  background-color: #e3e3e3;
+  padding: 20px;
+  font: cousine, courier new, monospace;
+  font-weight: normal;
+  line-height: 25px;
 }
 .pagination {
   margin: 20px 20px 0 20px;
@@ -415,6 +493,8 @@ header .nav {
 footer {
   clear: both;
   padding: 20px 0 20px 40px;
+  margin-top: -1px;
+  border-top: 1px solid #00bd00;
   font-family: cousine, courier new, monospace;
   font-size: 14px;
   font-weight: normal;
