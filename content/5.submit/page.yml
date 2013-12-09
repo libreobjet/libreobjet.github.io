@@ -3,7 +3,7 @@ content: |
     You can submit your object you design to the Libre Objet’s team.
     Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and ask a pull request. To be published on the website, be sure it matches the following requirements:
     
-    - 3D and 2D sources files of the plans
+    - 3D (SKP, IGES, STL, STEP, DAE, OBJ) and 2D (DXF, SVG, EPS) sources files of the plans 
     - A project.yml file that describes the project. An example can be found in the [Bouctje’s dowload archive](http://libreobjet.org/objects/bouctje/).
     - The PDF Guide: Documentation describing how to build the object and the plan. An example can be found in the [Bouctje’s dowload archive](http://libreobjet.org/objects/bouctje/).
     - A txt file containing the license. If you need help to choose a license, refer to the [dedicated page](http://libreobjet.org/licenses/)
