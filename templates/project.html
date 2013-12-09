@@ -33,7 +33,7 @@
               Builder: 
               {% if page.builder[0] is defined %}
                 {% for name in page.builder %}
-                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                <a href="{{ page.root_path }}search?q={{ name }}">{{ name }}</a> .
                 {% endfor %}
               {% else %}
               <a href="{{ page.root_path }}search?q={{ page.builder }}">{{ page.builder }}</a> .
@@ -42,14 +42,14 @@
             {% endif %}
             {% if page.origninal_designer %}
             <p class="origninal_designer">
-              Original designer / author: <a href="{{ page.root_path }}/search?q={{ page.origninal_designe }}">{{ page.origninal_designer }}</a> |
+              Original designer / author: <a href="{{ page.root_path }}search?q={{ page.origninal_designer }}">{{ page.origninal_designer }}</a> |
             </p>
             {% endif %}            
             {% if page.contributor %}
             <p class="contributors">
               {% if page.contributor[0] is defined %}
                 {% for name in page.contributor %}
-                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                <a href="{{ page.root_path }}search?q={{ name }}">{{ name }}</a> .
                 {% endfor %}
               {% else %}
               <a href="{{ page.root_path }}search?q={{ page.contributor }}">{{ page.contributor }}</a> .
@@ -58,7 +58,7 @@
             {% endif %}
             {% if page.realisation_place %}
             <p class="realisation-place">
-              Realisation place: <a href="{{ page.root_path }}/search?q={{ page.realisation-place }}">{{ page.realisation_place }}</a>
+              Realisation place: <a href="{{ page.root_path }}search?q={{ page.realisation_place }}">{{ page.realisation_place }}</a>
             </p>
             {% endif %}
             {% if page.required_hardware %}
@@ -66,7 +66,7 @@
               Required hardware: 
               {% if page.required_hardware[0] is defined %}
                 {% for name in page.required_hardware %}
-                <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                <a href="{{ page.root_path }}search?q={{ name }}">{{ name }}</a> .
                 {% endfor %}
               {% else %}
               <a href="{{ page.root_path }}search?q={{ page.required_hardware }}">{{ page.required_hardware }}</a> .
@@ -83,7 +83,7 @@
               Materials: 
               {% if page.materials[0] is defined %}
                 {% for name in page.materials %}
-                  <a href="{{ page.root_path }}/search?q={{ name }}">{{ name }}</a> .
+                  <a href="{{ page.root_path }}search?q={{ name }}">{{ name }}</a> .
                 {% endfor %}
               {% else %}
               <a href="{{ page.root_path }}search?q={{ page.materials }}">{{ page.materials }}</a> .
@@ -112,11 +112,11 @@
             {% endif %}
             {% if page.client %}
             <p class="client">
-              Client: <a href="{{ page.root_path }}/search?q={{ page.client }}">{{ page.client }}</a>
+              Client: <a href="{{ page.root_path }}search?q={{ page.client }}">{{ page.client }}</a>
             </p>
             {% endif %}
             <p class="object-license">
-              Licence: <a href="{{ page.root_path }}/search?q={{ page.license }}">{{ page.license }}</a>
+              Licence: <a href="{{ page.root_path }}search?q={{ page.license }}">{{ page.license }}</a>
             </p>
             <p class="creation-date">
               Design date: {{ page.creation_date }}
