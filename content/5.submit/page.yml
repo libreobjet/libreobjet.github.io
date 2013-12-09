@@ -11,14 +11,14 @@ content: |
 
     ## Directory architecture
         
-    - name-of-the-project/ *The name of your poject, no spaces, capital, neither special characters*
+    - name-of-the-project/ *The name of your project, no spaces, capital, neither special characters*
       - sources/
         - 3d/ *3D source files*
         - 2d/ *2D source files*
-        - guide/ *Source file of the pdf guide*
-        - license.txt *Contains the chosen licence text*
-      - images/ *Photographs and drawing*
-        - thumb.png *One of your image must be named “thumb”, it will become the featured image of your project*
+        - guide/ *Source files of the pdf guide*
+        - license.txt *Contains the chosen license text*
+      - images/ *Photographs and drawings*
+        - thumb.png *One of your images must be named “thumb”, it will become the featured image of your project*
       - project.yml *The only .yml file, see “Content of the .yml file”*
       - guide-fr.pdf *Language must be defined ex. guide-en.pdf*
 
@@ -36,7 +36,7 @@ content: |
         creation_date: 09-2013
         contributors: none
         derived_from: Bouctje
-        origninal_designer: Mathieu Gabiot
+        original_designer: Mathieu Gabiot
         realisation_place: RealizeBxl
         required_hardware: [Drill, Screw Driver, Saw]
         materials: OSB panel
@@ -48,6 +48,6 @@ content: |
         terms_of_use: Socializing
         
         content: >
-          Free description of your project. You can write here using the [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, make links and lists.
+          Free description of your project. You can write here using the [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, make links and lists. 
           
           Leave a blank line to begin a new paragraph.
