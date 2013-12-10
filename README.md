@@ -17,4 +17,8 @@ To be published on the website, be sure it match with the following requirements
 
 ## Requirements
 
-This website uses [Zippy](https://zippy.readthedocs.org/en/latest/) to generate archives. Please refer to the documentation to install this library and its dependencies.
+This website uses [Zippy](https://zippy.readthedocs.org/en/latest/) to generate archives. Please refer to the documentation to install this library and its dependencies. Zippy requires the php [zip extention](http://php.net/manual/en/book.zip.php).
+
+## License
+
+All website content is under [Free Art License](http://artlibre.org/licence/lal/en), except if stated otherwise.
