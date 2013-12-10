@@ -1,4 +1,4 @@
-object_name: BoBouctje
+object_name: Bouctjje
 designer: Thomas De Ridder
 builder: Thomas De Ridder
 category: Bookstand
@@ -9,7 +9,7 @@ contributors: none
 derived_from: Bouctje
 Origninal designer/author: Mathieu Gabiot
 realisation_place: RealizeBxl
-required_hardware: Drill - Screw Driver - Saw
+required_hardware: Drill - Screw Driver - Saw - Jigsaw
 materials: OSB panel
 license: Free Art Licence
 client: Workshop Libre Objet
