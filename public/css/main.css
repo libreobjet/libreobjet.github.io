@@ -156,13 +156,6 @@ mark {
   background: #ff0;
   color: #000;
 }
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -483,7 +476,7 @@ header .nav {
 .textonly pre {
   background-color: #e3e3e3;
   padding: 20px;
-  font: cousine, courier new, monospace;
+  font-family: cousine, courier new, monospace;
   font-weight: normal;
   line-height: 25px;
 }
