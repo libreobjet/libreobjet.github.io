@@ -7,4 +7,4 @@ var alignTitle = function(box){
   objectName.css('margin-top', margin);
 }
 
-alignTitle($('.object-box'));
+// alignTitle($('.object-box'));

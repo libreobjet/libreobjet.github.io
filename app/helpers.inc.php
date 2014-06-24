@@ -93,7 +93,8 @@ Class Helpers {
     }
 
     # sort list in reverse-numeric order
-    natcasesort($files);
+    // natcasesort($files);
+    krsort($files, SORT_NUMERIC);
     return $files;
   }
 
