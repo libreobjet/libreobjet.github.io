@@ -1,3 +1,0 @@
-bypass_cache: true
-title: Search Results
-
