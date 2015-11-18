@@ -1,10 +1,5 @@
 .DS_Store
-app/_cache/pages/*
-app/_cache/templates/*
-app/_cache/images/*
 
-
-logs
-/app/_cache/
-/public/archives/
-
+.jekyll-metadata
+.sass-cache
+_site/
