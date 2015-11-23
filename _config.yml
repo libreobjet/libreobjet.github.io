@@ -22,3 +22,16 @@ github_username:  libreobjet
 
 # Build settings
 markdown: kramdown
+
+# Object collection
+collections:
+  objects:
+    output: true
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: objects
+    values:
+      layout: object
