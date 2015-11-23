@@ -1,0 +1,8 @@
+---
+layout: default
+title: Our list of objects
+---
+
+{% for object in site.objects %}
+  <a href="{{ object.url}}">{{ object.object_name }}</a><br>
+{% endfor %}
