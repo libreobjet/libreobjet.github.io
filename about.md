@@ -9,7 +9,8 @@ layout: default
 - [Mathieu Gabiot](http://www.mathieu-g.be/)
 - [Martin Lévêque](http://www.behance.net/martinleveque)
 
-## Almunis
+## Almuni
+
 - [Raphaël Bastide](http://raphaelbastide.com/)
 
 ## Contact
@@ -20,4 +21,8 @@ Subscribe to [Open Source Design mailing list](https://listes.domainepublic.net/
 
 ## About this website
 
-This website was built using [Stacey](http://staceyapp.com/). An image of this website is available on [GitHub](https://github.com/libreobjet/libreobjet.org). Any question or ideas can be discussed on the GitHub’s [issue page](https://github.com/libreobjet/libreobjet.org/issues) or by [email](mailto:hello@libreobjet.org). All the website content is under [Free Art License](http://artlibre.org/licence/lal/en), except if stated otherwise.
+This website was built using [Jekyll](http://http://jekyllrb.com/), a static website generator. Which means that this website will also run from a usb key, a phone or a CD-ROM, without any software necessary other than a browser to view its content. You are encouraged to download a copy of it and deploy it wherever you see fit, as long as you don't change the license attached to it. All sources are available on [GitHub](https://github.com/libreobjet/libreobjet.org).
+
+Any question, suggestions or ideas can be discussed on the GitHub’s [issue page](https://github.com/libreobjet/libreobjet.org/issues) or by [email](mailto:hello@libreobjet.org).
+
+All the website content is under [Free Art License](http://artlibre.org/licence/lal/en), except if stated otherwise.
