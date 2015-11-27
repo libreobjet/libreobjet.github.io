@@ -1,3 +1,4 @@
+---
 object_name: Multi
 designer: Jeromine Massart
 builder: Jeromine Massart and Frederic Monaux
@@ -10,11 +11,5 @@ realisation_place: Nalinnes
 required_hardware: [jigsaw, circular saw, drill, Wood glue or not, sander, sand paper]
 license: Free Art Licence
 client: Jeromine Massart - Arts²
-
-content: +++
-Ambient and reading lamp. Feel free to download instructions and sources to copy, modify and redistribute it under the same license. 
-+++
-
-
-
-
+---
+Ambient and reading lamp. Feel free to download instructions and sources to copy, modify and redistribute it under the same license.

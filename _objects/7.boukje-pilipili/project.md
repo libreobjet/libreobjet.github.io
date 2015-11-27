@@ -1,3 +1,4 @@
+---
 object_name: Bouctje Pili-Pili
 designer: Gregoire Vigneron
 builder: Gregoire Vigneron
@@ -17,8 +18,4 @@ Improvement: scaled to display other DIN sheet paper, change panel type like ply
 Advantage: low cost, flat kit unmountable, optimized drop wood
 Disadvantage: Laser cutter needed to cut
 Terms of use: bookshelf use only
-
-content: +++
-designed to show Pili-Pili productions on fairs or exhibitions
-+++
-
+---

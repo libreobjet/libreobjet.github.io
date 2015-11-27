@@ -1,3 +1,4 @@
+---
 object_name: Bouctjje
 designer: Thomas De Ridder
 builder: Thomas De Ridder
@@ -15,9 +16,6 @@ license: Free Art Licence
 client: Workshop Libre Objet
 Improvement: adding one level
 Advantage: expand storage
-Disadvantage: Less portable, increased complexity 
+Disadvantage: Less portable, increased complexity
 Terms of use: bookshelf only
-
-content: +++
-..
-+++
+---

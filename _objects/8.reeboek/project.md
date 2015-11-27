@@ -1,3 +1,4 @@
+---
 object_name: REEBOeK
 designer: Verly Laurent
 builder: Verly Laurent
@@ -17,7 +18,5 @@ Improvement: change functionality to be used as armchair
 Advantage: comfortable little seat and also a rocking chair
 Disadvantage: need to add cushions
 Terms of use: chair
-
-content: +++
+---
 sources ready for Conflict & Design - 7th Triennale at C-Mine Genk
-+++

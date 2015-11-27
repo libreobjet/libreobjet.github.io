@@ -1,3 +1,4 @@
+---
 object_name: Bouctje cardboard
 designer: Camille Gabrieli
 builder: Camille Gabrieli
@@ -13,11 +14,7 @@ required_hardware: laser cutter
 materials: cardboard 2 layers
 license: Free Art Licence
 client: Workshop Libre Objet
-Improvement: ...
+Improvement:
 Advantage: lightweight version, one piece to fold
 Disadvantage: limited to hold heavy books
-Terms of use: ...
-
-content: +++
-...
-+++
+---

@@ -1,3 +1,4 @@
+---
 object_name: Bouctje3
 designer: [Bourg Stefanie, Colart Vicky, Massart Jeromine]
 builder: [Bourg Stefanie, Colart Vicky, Massart Jeromine]
@@ -16,6 +17,5 @@ improvement: stackability
 advantage: minimal modification form the original design
 disadvantage: limited to 3 bouctjes on top of each other
 terms_of_use: bookshelf use only
-
-content: >
-  Designed to increase storage and then to organize your books.
+---
+Designed to increase storage and then to organize your books.

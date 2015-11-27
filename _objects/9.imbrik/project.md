@@ -1,3 +1,4 @@
+---
 object_name: Imbrik
 designer: [Quaglia Milena, Baise Elodie]
 builder: [Quaglia Milena, Baise Elodie]
@@ -17,7 +18,5 @@ Improvement: folding ability
 Advantage: easy to mount and to unmount
 Disadvantage: cutting more complex
 Terms of use: bookshelf use only
-
-content: +++
+---
 sources ready for Conflict & Design - 7th Triennale at C-Mine Genk
-+++
