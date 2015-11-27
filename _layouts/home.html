@@ -1,30 +1,52 @@
-{% for child in page.root %}
-{% if child.children %}
-<div class="project-list">
-  {% for child in child.children %}
-  <div class="object-box {{ child.id }}">
-    {% if child.thumb %}
-    <div class="object-image">
-      <a href="{{ child.url }}">
-       <img src="{{resize_path(child.thumb.url, 500, 0, 0, 95)}}" width="500" height="auto" class="project-thumb" alt="{{ child.object_name }}">
-      </a>
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+{% include header.html %}
+  <div class="container content">
+    <div class="highlight">
+    {% if page.title %}{{ page.title }}{% else %}{{ site.moto }}{% endif %}
     </div>
-      {% else %}
-    <div class="object-image noimage">
-    </div>
+    <div class="project-list">
+    {% for object in site.objects %}
+      {% assign obj_name = object.url | split:"/" | last %}
+      {% if obj_name != "index.html" %}
+        <div class="object-box">
+          {% for collection in site.collections %}
+            {% if collection.label == 'objects' %}
+              {% for file in collection.files %}
+                {% assign object_folder = object.path | split:"/" %}
+                {% assign file_folder = file.path | split:"/" %}
+                {%  if object_folder[1] == file_folder[2] %}
+                  {% assign source = file.path | remove_first:"_" %}
+                  {% assign name = source | split:"/" | last %}
+                  {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".svg" or file.extname == ".gif" %}
+                    {% assign source_name = name | split:"." | first %}
+                    {% if source_name == "thumb" or source_name == "cover" %}
+                      <div class="object-image">
+                        <a href="{{ object.url }}">
+                         <img src="{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                {% endif%}
+              {% endfor %}
+            {%  endif %}
+          {% endfor %}
+          <div class="object-meta">
+            <p class="object-name">
+              <a href="{{ object.url }}">{{ object.object_name }}</a>
+            </p>
+            {% if object.designer %}
+              <p class="object-designer">By {{ object.designer }}</p>
+            {% endif %}
+          </div>
+        </div>
       {% endif %}
-    <div class="object-meta">
-      <p class="object-name">
-        <a href="{{ child.url }}">{{ child.object_name }}</a>
-      </p>
-      {% if child.designer %}
-      <p class="object-designer">
-        By <a href="{{ child.root_path }}/search?q={{ child.designer }}">{{ child.designer }}</a>
-      </p>
-      {% endif %}
+    {% endfor %}
     </div>
   </div>
-  {% endfor %}
-</div>
-{% endif %}
-{% endfor %}
+{% include footer.html %}
+</body>
+</html>
