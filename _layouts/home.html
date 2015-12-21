@@ -3,15 +3,15 @@
 {% include head.html %}
 <body>
 {% include header.html %}
-  <div class="container content">
+  <div class="container content list">
     <div class="highlight">
     {% if page.title %}{{ page.title }}{% else %}{{ site.moto }}{% endif %}
     </div>
-    <div class="project-list">
     {% for object in site.objects %}
       {% assign obj_name = object.url | split:"/" | last %}
       {% if obj_name != "index.html" %}
         <div class="object-box">
+          {% assign t = 0 %}
           {% for collection in site.collections %}
             {% if collection.label == 'objects' %}
               {% for file in collection.files %}
@@ -20,9 +20,17 @@
                 {%  if object_folder[1] == file_folder[2] %}
                   {% assign source = file.path | remove_first:"_" %}
                   {% assign name = source | split:"/" | last %}
-                  {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".svg" or file.extname == ".gif" %}
+                  {% if file.extname == ".jpg" or
+                        file.extname == ".JPG" or
+                        file.extname == ".png" or
+                        file.extname == ".PNG" or
+                        file.extname == ".svg" or
+                        file.extname == ".SVG" or
+                        file.extname == ".gif" or
+                        file.extname == ".GIF" %}
                     {% assign source_name = name | split:"." | first %}
                     {% if source_name == "thumb" or source_name == "cover" %}
+                      {% assign t = 1 %}
                       <div class="object-image">
                         <a href="{{ object.url }}">
                          <img src="{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
@@ -34,12 +42,16 @@
               {% endfor %}
             {%  endif %}
           {% endfor %}
+          {% if t == 0  %}
+            <div class="object-image noimage">
+            </div>
+          {% endif %}
           <div class="object-meta">
-            <p class="object-name">
+            <div class="object-name">
               <a href="{{ object.url }}">{{ object.object_name }}</a>
-            </p>
+            </div>
             {% if object.designer %}
-              <p class="object-designer">By {{ object.designer }}</p>
+              <div class="object-designer">By {% for designer in object.designer %}{{ designer }} {% endfor %}</div>
             {% endif %}
           </div>
         </div>
