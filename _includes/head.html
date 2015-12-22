@@ -7,12 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 
   {% assign lvl = page.url | append:'X' | split:'/' | size %}
-  {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+  {% capture relative %}{%if lvl >= 3 %}{% for i in (3..lvl) %}{% if forloop.last %}..{% else %}../{% endif %}{% endfor %}{% else %}.{% endif %}{% endcapture %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
 
-  <link href="{{ relative }}public/css/fonts/stylesheet.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{{ relative }}public/css/normalize.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="{{ relative }}public/css/main.css" type="text/css" media="screen">
+  <link href="{{ relative }}/public/css/fonts/stylesheet.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ relative }}/public/css/normalize.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{ relative }}/public/css/main.css" type="text/css" media="screen">
 </head>

@@ -32,8 +32,8 @@
                     {% if source_name == "thumb" or source_name == "cover" %}
                       {% assign t = 1 %}
                       <div class="object-image">
-                        <a href="{{ object.url }}">
-                         <img src="{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
+                        <a href="{{ relative }}{{ object.url }}">
+                         <img src="{{ relative }}{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
                         </a>
                       </div>
                     {% endif %}
@@ -48,7 +48,7 @@
           {% endif %}
           <div class="object-meta">
             <div class="object-name">
-              <a href="{{ object.url }}">{{ object.object_name }}</a>
+              <a href="{{ relative }}{{ object.url}}">{{ object.object_name }}</a>
             </div>
             {% if object.designer %}
               <div class="object-designer">By {% for designer in object.designer %}{{ designer }} {% endfor %}</div>
