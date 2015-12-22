@@ -19,9 +19,9 @@ Our activities range from organizing workshops, giving lectures, writing books, 
 
 ## Contact
 
-By email: [hello@libreobjet.org](mailto:hello@libreobjet.org)
-On Twitter: [@Libreobjet](https://twitter.com/LibreObjet)
-Subscribe to [Open Source Design mailing list](https://listes.domainepublic.net/listinfo/opensourcedesign)
+By email: [hello@libreobjet.org](mailto:hello@libreobjet.org)  
+On Twitter: [@Libreobjet](https://twitter.com/LibreObjet)  
+Subscribe to [Open Source Design mailing list](https://listes.domainepublic.net/listinfo/opensourcedesign)  
 
 ## About this website
 
