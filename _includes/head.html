@@ -10,7 +10,7 @@
   {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
 
   <link href="{{ relative }}public/css/fonts/stylesheet.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ relative }}public/css/normalize.css" type="text/css" media="screen">

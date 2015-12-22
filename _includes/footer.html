@@ -3,8 +3,6 @@
         <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
       </footer>
     </div><!--  end #container-->
-    {% assign lvl = page.url | append:'X' | split:'/' | size %}
-    {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
     <script src="{{ relative }}public/js/jquery-1.10.2.min.js"></script>
     <script src="{{ relative }}public/js/main.js"></script>
   </body>
