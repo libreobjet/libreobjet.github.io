@@ -22,10 +22,11 @@ To help you in this matter, here is a list of licenses that we prefer and that w
 
 ### Creative Commons
 [https://creativecommons.org](https://creativecommons.org)  
-We will only accept work that is under one of these three CC licenses:
 
-- Attribution-Share Alike (CC-by-sa)
-- Attribution (CC-by)
+We will only accept work that is under one of these three Creative Commons licenses (any other CC license is not considered open source):
+
+- Attribution-Share Alike (CC-BY-SA)
+- Attribution (CC-BY)
 - Public Domain Dedication (CC0)
 
 ### Gnu General Public License
@@ -36,7 +37,7 @@ We will only accept work that is under one of these three CC licenses:
 
 ### OSHW
 There is also some specific open source hardware licenses available. You might have heard of the [TAPR OHL](http://www.tapr.org/ohl.html) or the [CERN OHL](http://www.ohwr.org/documents/294).
-We have never seen any furniture design released under these licenses. They are usually used for electronic hardware. But there is no reason they could not apply to any other kind of hardware design.  
+
 
 ## More info
 
