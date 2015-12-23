@@ -1,24 +1,28 @@
 # Website of Libre Objet
 
-Built with <a href="http://staceyapp.com/">Stacey</a>.
+Built with <a href="http://jekyllrb.com/">Jekyll</a>.
 
 ## How to post a new design
+You can submit by email your free/libre open source objects that you designed to the [Libre Objet’s team](mailto:hello@libreobjet.org).
+You can send us a link to your git repository where you host your project.
+You can also clone this website and add your object in the `_objects` folder and do a pull request.
 
-You can submit your object you design to the Libre Objet’s team.
-To be published on the website, be sure it match with the following requirements:
+We will then study your proposition carefully and let you know {if|when} we include it.
+Although, to be published on this website, be sure your project matches with [our requirements](http://libreobjet.org/submit.html).
 
-*requirement list*
+## How to copy this website
+This is the method if you want to browse locally the website (without changing it), keep it on a usb key to carry it around or install it on your own server.
 
-## Install
+1. {Clone|Download} the `master` branch of this repository.
+2. Point your browser to the index.html file at the root of the directory.
 
-1. Download or clone the content of this repository
-2. Create a public/archives folder that must be writable
-3. Launch the website in your browser
+## How to {modify|adapt} this website
+This is the method if you want to add your objects, modify this website to your own liking, create your own curated libre object
 
-## Requirements
-
-This website uses [Zippy](https://zippy.readthedocs.org/en/latest/) to generate archives. Please refer to the documentation to install this library and its dependencies. Zippy requires the php [zip extention](http://php.net/manual/en/book.zip.php).
+1. Clone the `source` branch of this repository
+2. Have Jekyll installed on your system.
+3. Modify files and folders
+4. Run `jekyll serve`
 
 ## License
-
 All website content is under [Free Art License](http://artlibre.org/licence/lal/en), except if stated otherwise.
