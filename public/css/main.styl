@@ -1,0 +1,226 @@
+@import 'nib'
+
+color-libre-objet = #00bd00
+mono = cousine, courier new, monospace
+sans = Raleway, arial, sans-serif
+fat = bold 30px\/1.3em Raleway, arial, sans-serif
+
+body
+  line-height 1em
+  font-family sans
+  letter-spacing 1px
+  font-size 16px
+  line-height 22px
+  font-weight 600
+
+header
+  border-bottom 1px solid color-libre-objet
+  padding 50px 0 70px 40px
+  h1
+    float left
+    a:hover
+      border none
+    .logo
+      width 214px
+      height auto
+      position relative
+      top -22px
+  .nav
+    float left
+    margin 4px 0 0 230px
+
+.nav li, .pagination li
+  display block
+  float left
+  margin 0 20px
+
+// Content
+
+.content
+  .highlight
+    background color-libre-objet
+    color white
+    padding 50px 0 50px 500px
+    text-align left
+    font fat
+    font-weight 600
+    border-bottom 1px solid color-libre-objet
+
+
+// Object
+
+.object-box
+  clearfix()
+  border-bottom 1px solid color-libre-objet
+  .object-image
+    float left
+    border-right 1px solid color-libre-objet
+    width 501px
+    height auto
+    &.noimage
+      height 300px
+      &::after
+        content " "
+        display block
+        transform rotate(-31deg)
+        position relative
+        top 149px
+        left -41px
+        width 583px
+        border-bottom 1px solid color-libre-objet
+    img
+      display block
+  .object-meta
+    float left
+    padding 40px
+    font-family mono
+    font-size 13px
+    font-weight normal
+    p
+      margin 0 0 13px 0
+      line-height 17px
+      transform scale(1, 1.1)
+    li
+      display inline
+  .object-content
+    max-width 500px
+    float left
+    padding 40px
+    .download
+      margin-bottom 20px
+.single
+  .highlight
+    background white
+    color color-libre-objet
+
+// Home
+.home
+  .highlight
+    padding 50px 0
+    text-align center
+
+// Object in lists
+
+.content.list
+  .object-box
+    .object-meta
+      padding 0
+      width calc(100% \- 600px)
+      .object-name
+        margin 130px 0 80px 80px
+        font fat
+        text-align center
+      .object-designer
+        display none
+
+// Object in single page
+
+.content.single
+  .object-box
+    .object-image
+      border-bottom 1px solid color-libre-objet
+    .object-meta
+      width 400px
+      position relative
+      left -1px
+      border-left 1px solid color-libre-objet
+      border-right 1px solid color-libre-objet
+    .object-content
+      border-left 1px solid color-libre-objet
+      width 500px
+      float left
+      position relative
+      left -2px
+      .download
+        a
+          border-right 1px solid color-libre-objet
+          border-bottom 1px solid color-libre-objet
+          padding 30px 70px
+          color color-libre-objet
+          position relative
+          top -13px
+          left -40px
+          &:hover
+            color white
+            background color-libre-objet
+      .dlintro
+        margin 30px 0px
+
+// Search page
+
+.content.search
+  .highlight
+    input, button
+      border 1px solid white
+      background transparent
+      color white
+      padding 3px 5px
+    button
+      border-left none
+      padding 3px 10px
+
+// Content pages
+
+.textonly
+  padding 80px 0 0 0
+  margin 0 0 40px 502px
+  width 100%
+  max-width 700px
+  p, ul
+    margin 0 0 20px 0
+  h1
+    margin 0 0 20px 0
+  h2
+    margin 60px 0 30px 0
+    font bold 25px\/1.3em Raleway, arial, sans-serif
+    &:first-child
+      margin-top 0
+  li
+    list-style-type none
+    margin 0 0 20px 0px
+    padding 0 0 0px 40px
+    display block
+    position relative
+    &:before
+      content "−"
+      color color-libre-objet
+      position absolute
+      font-size 30px
+      top 0
+      left 0
+  em
+    color grey
+  pre
+    background-color #E3E3E3
+    padding 20px
+    font-family mono
+    font-weight normal
+    line-height 25px
+
+.pagination
+  margin 20px 20px 0 20px
+
+
+footer
+  clear both
+  padding 20px 0 20px 40px
+  margin-top -1px
+  border-top 1px solid color-libre-objet
+  font-family mono
+  font-size 14px
+  font-weight normal
+
+a
+  color color-libre-objet
+  text-decoration none
+  transition color .1s
+  &:hover
+    color black
+    border-bottom 2px solid black
+
+::selection
+  background #EAEAEA
+  color color-libre-objet
+::-moz-selection
+  background #EAEAEA
+  color color-libre-objet
