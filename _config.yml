@@ -23,6 +23,9 @@ github_username:  libreobjet
 # Build settings
 markdown: kramdown
 
+exclude: ['node_modules', 'Gruntfile.js', 'package.json', '**/*.styl']
+keep_files: ['.git']
+
 # Object collection
 collections:
   objects:
