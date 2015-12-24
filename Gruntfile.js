@@ -33,19 +33,13 @@ module.exports = function(grunt) {
       options: {
         dir: '_site',
         commit: true,
-        push: true,
+        push: false,
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
       pages: {
         options: {
-          remote: 'git@github.com:example_user/example_webapp.git',
-          branch: 'gh-pages'
-        }
-      },
-      local: {
-        options: {
-          remote: '../',
-          branch: 'build'
+          remote: 'git@github.com:libreobjet/libreobjet.github.io.git',
+          branch: 'master'
         }
       }
     }
@@ -58,5 +52,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['stylus', 'jekyll:serve']);
+  grunt.registerTask('deploy', ['buildcontrol']);
 
 };
