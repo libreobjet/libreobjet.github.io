@@ -43,48 +43,54 @@
     Submit an object
     </div>
     <div class="textonly">
-    <p>You can submit your design to the Libre Objet’s team by <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#108;&#111;&#064;&#108;&#105;&#098;&#114;&#101;&#111;&#098;&#106;&#101;&#116;&#046;&#111;&#114;&#103;">email</a>.
+    <p>You can submit your design to the Libre Objet’s team by <a href="mailto:hello@libreobjet.org">email</a>.
 Advanced users can fork the <a href="https://github.com/libreobjet/libreobjet.org">project on GitHub</a>, add an object and do a pull request. To be published on the website, be sure it matches the following requirements:</p>
 
 <ul>
-  <li>Include all 3D (SKP, IGES, STL, STEP, DAE, OBJ) and/or 2D (DXF, SVG, EPS) sources files to build the object. We do prefer and encourage the use of standard open formats.</li>
-  <li>A markdown file (preferably called project.md) that describes the object. See documentation below for an example.</li>
-  <li>A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the <a href="http://libreobjet.org/objects/bouctje/">Bouctje’s dowload archive</a>.</li>
-  <li>A txt file containing the license. If you need help to choose a license, refer to the <a href="http://libreobjet.org/licenses/">dedicated page</a></li>
-  <li>One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.</li>
+<li>Include all 3D (SKP, IGES, STL, STEP, DAE, OBJ) and/or 2D (DXF, SVG, EPS) sources files to build the object. We do prefer and encourage the use of standard open formats.</li>
+<li>A markdown file (preferably called project.md) that describes the object. See documentation below for an example.</li>
+<li>A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the <a href="http://libreobjet.org/objects/bouctje/">Bouctje’s dowload archive</a>.</li>
+<li>A txt file containing the license. If you need help to choose a license, refer to the <a href="http://libreobjet.org/licenses/">dedicated page</a></li>
+<li>One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.</li>
 </ul>
 
-<h2 id="directory-architecture">Directory architecture</h2>
-<p>This is a suggested directory structure. We’re trying to be as flexible as possible. The only thing really mandatory are a folder named according to the project and that contains source files, pictures and a markdown file with a description and some meta-data.</p>
+
+<h2>Directory architecture</h2>
+
+<p>This is a suggested directory structure. We're trying to be as flexible as possible. The only thing really mandatory are a folder named according to the project and that contains source files, pictures and a markdown file with a description and some meta-data.</p>
 
 <ul>
-  <li>name-of-the-project/ <em>The name of your project, no spaces, capital, neither special characters</em>
-    <ul>
-      <li>sources/ <em>Subfolder suggestion to keeps things tidy</em>
-        <ul>
-          <li>3d/ <em>3D source files</em></li>
-          <li>2d/ <em>2D source files</em></li>
-          <li>guide/ <em>Source files for the pdf guide</em></li>
-          <li>LICENSE.txt <em>Contains the chosen license text</em></li>
-        </ul>
-      </li>
-      <li>images/ <em>Images, photographs and drawings</em>
-        <ul>
-          <li>thumb.png <em>One of your images must be named “thumb” or “cover”, it will the featured image of your project</em></li>
-        </ul>
-      </li>
-      <li>project.md <em>The only .md file, see “Content of the .md file below”</em></li>
-      <li>guide-fr.pdf <em>Language must be defined ex. guide-en.pdf</em></li>
-    </ul>
-  </li>
+<li>name-of-the-project/ <em>The name of your project, no spaces, capital, neither special characters</em>
+
+<ul>
+<li>sources/ <em>Subfolder suggestion to keeps things tidy</em>
+
+<ul>
+<li>3d/ <em>3D source files</em></li>
+<li>2d/ <em>2D source files</em></li>
+<li>guide/ <em>Source files for the pdf guide</em></li>
+<li>LICENSE.txt <em>Contains the chosen license text</em></li>
+</ul>
+</li>
+<li>images/ <em>Images, photographs and drawings</em>
+
+<ul>
+<li>thumb.png <em>One of your images must be named “thumb” or "cover", it will the featured image of your project</em></li>
+</ul>
+</li>
+<li>project.md <em>The only .md file, see “Content of the .md file below”</em></li>
+<li>guide-fr.pdf <em>Language must be defined ex. guide-en.pdf</em></li>
+</ul>
+</li>
 </ul>
 
-<h2 id="content-of-the-md-file">Content of the .md file</h2>
+
+<h2>Content of the .md file</h2>
 
 <p>The .md file describes the object in details with a markdown syntax.
-Copy paste the text below and fill in the gaps.
-```
-—
+Copy paste the text below and fill in the gaps.</p>
+
+<pre><code>---
 object_name: # Obviously, the object name
 designer: #full name of the designer(s)
 builder: #full name of builder(s) [Miguel Van Steenbrugge, Mr Builder, Another Builder]
@@ -100,13 +106,13 @@ required_hardware: # list of tools necessary for construction ex: [Drill, Screw 
 materials: # List of materials
 license: # Name of the license
 client: # Name(s) of the client
-—
-Write freely about the object. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.</p>
+---
+Write freely about the object. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.
 
-<p>Write here using the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax, make links and lists.</p>
+Write here using the [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, make links and lists.
 
-<p>Leave a blank line to begin a new paragraph.
-```</p>
+Leave a blank line to begin a new paragraph.
+</code></pre>
 
     </div>
   </div>
