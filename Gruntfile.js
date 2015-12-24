@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       options: {
         dir: '_site',
         commit: true,
-        push: false,
+        push: true,
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
       pages: {
