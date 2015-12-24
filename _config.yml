@@ -21,7 +21,7 @@ twitter_username: libreobjet
 github_username:  libreobjet
 
 # Build settings
-markdown: kramdown
+markdown: rdiscount #redcarpet #kramdown
 
 exclude: ['node_modules', 'Gruntfile.js', 'package.json', '**/*.styl', 'README.md']
 keep_files: ['.git', 'README.md']
