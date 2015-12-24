@@ -1,8 +1,20 @@
 {
-  "name": "libreobjet.org",
-  "version": "0.1.0",
+  "name" : "libreobjet.org",
+  "version" : "0.1.0",
+  "homepage" : "http://lireobjet.org",
+  "bugs" : {
+    "url" : "https://github.com/libreobjet/libreobjet.github.io/issues",
+    "email" : "hello@libreobjet.org"
+  },
+  "license" : "SEE LICENSE IN LICENSE",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/libreobjet/libreobjet.github.io.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-stylus": "~0.22.0"
+    "grunt-contrib-stylus": "~0.22.0",
+    "grunt-build-control ": "~0.6.2",
+    "grunt-jekyll": "~0.4.2"
   }
 }
