@@ -12,9 +12,10 @@
     "url" : "https://github.com/libreobjet/libreobjet.github.io.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-stylus": "~0.22.0",
-    "grunt-build-control": "~0.6.2",
-    "grunt-jekyll": "~0.4.2"
+    "grunt" : "~0.4.5",
+    "grunt-contrib-stylus" : "~0.22.0",
+    "grunt-build-control" : "~0.6.2",
+    "grunt-jekyll" : "~0.4.2",
+    "grunt-contrib-compress" : "~0.14.0"
   }
 }

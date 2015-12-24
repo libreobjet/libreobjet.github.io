@@ -45,13 +45,34 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.dynamicCompress = function (directory) {
+    var target = grunt.file.expand({ filter: "isDirectory" }, directory + '/*');
+    for (var i in target) {
+      var subfolder_name = target[i].substr( target[i].lastIndexOf("/") + 1 );
+      grunt.config.set('compress.' + subfolder_name, {
+        expand: true,
+        cwd: target[i],
+        src: ['**/*'],
+        options: {
+          mode: 'zip',
+          archive: '_site/objects/' + subfolder_name + '/' + subfolder_name + '.zip'
+        }
+      });
+    }
+  };
+
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-build-control');
 
-  // Default task(s).
+  grunt.registerTask('zip-objects', 'Zip all the objects folders', function(){
+    grunt.dynamicCompress('_objects');
+    grunt.task.run('compress');
+  });
+
   grunt.registerTask('default', ['stylus', 'jekyll:serve']);
-  grunt.registerTask('deploy', ['buildcontrol']);
+  grunt.registerTask('deploy', ['stylus', 'buildcontrol']);
 
 };
