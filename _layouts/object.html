@@ -19,7 +19,7 @@
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
                 {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".svg" or file.extname == ".gif" %}
-                  <li><img src="{{ source }}" alt="{{ name }}"/></li>
+                  <li><img src="{{ relative }}{{ source }}" alt="{{ name }}"/></li>
                 {% endif %}
               {% endif%}
             {% endfor %}
@@ -33,7 +33,7 @@
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
                 {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".svg" and file.extname != ".gif" %}
-                  <li><a href="{{ source }}">{{ name }}</a></li>
+                  <li><a href="{{ relative }}{{ source }}">{{ name }}</a></li>
                 {% endif %}
               {% endif%}
             {% endfor %}
