@@ -17,7 +17,6 @@
     "grunt-build-control" : "~0.6.2",
     "grunt-jekyll" : "~0.4.2",
     "grunt-contrib-compress" : "~0.14.0",
-    "jpegtran" : "~0.2.0",
     "grunt-contrib-imagemin": "~1.0.0",
     "grunt-image-resize": "~1.0.0"
   }
