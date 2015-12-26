@@ -1,3 +1,8 @@
+var path = require("path");
+var jpegtran = require('imagemin-jpegtran');
+var optipng = require('imagemin-optipng');
+var svgo = require('imagemin-svgo');
+
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -42,6 +47,40 @@ module.exports = function(grunt) {
           branch: 'master'
         }
       }
+    },
+    imagemin: {                          // Task
+      dynamic: {                         // Another target
+        options: {                       // Target options
+          optimizationLevel: 3,
+          svgoPlugins: [{ removeViewBox: false }],
+          use: [
+            jpegtran(),
+            optipng(),
+            svgo()
+          ]
+        },
+        files: [{
+          expand: true,                          // Enable dynamic expansion
+          cwd: '_site/objects/',                 // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],             // Actual patterns to match
+          dest: '_site/objects/'                  // Destination path prefix
+        }]
+      }
+    },
+    image_resize: {
+      resize: {
+        options: {
+            width: 770,
+            height: 1000, // Because without that, it just generates a 1x1px file
+            //overwrite: true
+        },
+        files: [{
+          expand: true,
+          cwd: '_site/objects/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: '_site/objects/'
+        }]
+      }
     }
   });
 
@@ -66,13 +105,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-image-resize');
 
   grunt.registerTask('zip-objects', 'Zip all the objects folders', function(){
     grunt.dynamicCompress('_objects');
     grunt.task.run('compress');
   });
 
+  grunt.registerTask('image_mignifier', ['image_resize', 'imagemin']);
   grunt.registerTask('default', ['stylus', 'jekyll:serve']);
-  grunt.registerTask('deploy', ['stylus', 'buildcontrol']);
+  grunt.registerTask('build', ['stylus', 'jekyll:dist', 'zip-objects'] );
+  grunt.registerTask('deploy', ['build', 'buildcontrol']);
 
 };
