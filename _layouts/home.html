@@ -28,7 +28,7 @@
                         file.extname == ".SVG" or
                         file.extname == ".gif" or
                         file.extname == ".GIF" %}
-                    {% assign source_name = name | split:"." | first %}
+                    {% assign source_name = name | split:"." | first | downcase %}
                     {% if source_name == "thumb" or source_name == "cover" %}
                       {% assign t = 1 %}
                       <div class="object-image">

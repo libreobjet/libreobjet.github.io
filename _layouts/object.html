@@ -3,7 +3,7 @@
 {% include head.html %}
 <body>
 {% include header.html %}
-  <div class="container content">
+  <div class="container content single">
     <div class="highlight">
     {% if page.object_name %}{{ page.object_name }}{% else %}{{ site.moto | newline_to_br }}{% endif %}
     </div>
@@ -18,7 +18,12 @@
               {%  if page_folder[1] == file_folder[2] %}
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
-                {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".gif" %}
+                {% if file.extname == ".jpg" or
+                      file.extname == ".png" or
+                      file.extname == ".gif" or
+                      file.extname == ".JPG" or
+                      file.extname == ".PNG" or
+                      file.extname == ".GIF" %}
                   <li><img src="{{ relative }}{{ source }}" alt="{{ name }}"/></li>
                 {% endif %}
               {% endif%}
@@ -32,7 +37,8 @@
               {%  if page_folder[1] == file_folder[2] %}
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
-                {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".gif" %}
+                {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".gif" and
+                      file.extname != ".JPG" and file.extname != ".PNG" and file.extname != ".GIF" %}
                   <li><a href="{{ relative }}{{ source }}">{{ name }}</a></li>
                 {% endif %}
               {% endif%}
@@ -60,6 +66,10 @@
       </div>
       <div class="object-content">
         {{ content }}
+      </div>
+      <div>
+        {% assign folder_name = page.url | split:"/" %}
+        <p class="download"><a href="{{ folder_name[2] }}.zip">Download</a></p>
       </div>
     </div>
   </div>

@@ -72,20 +72,11 @@ header
       display block
   .object-meta
     float left
-    padding 40px
     font-family mono
     font-size 13px
     font-weight normal
-    p
-      margin 0 0 13px 0
-      line-height 17px
-      transform scale(1, 1.1)
-    li
-      display inline
   .object-content
-    max-width 500px
     float left
-    padding 40px
     .download
       margin-bottom 20px
 .single
@@ -117,20 +108,36 @@ header
 
 .content.single
   .object-box
-    .object-image
-      border-bottom 1px solid color-libre-objet
-    .object-meta
-      width 400px
-      position relative
-      left -1px
-      border-left 1px solid color-libre-objet
-      border-right 1px solid color-libre-objet
-    .object-content
-      border-left 1px solid color-libre-objet
-      width 500px
+    .images
       float left
+      list-style-type none
+      margin 0
+      padding 0
+      width 50%
+      border-right 1px solid color-libre-objet
+      li
+        margin 0
+        padding 0
+        img
+          display block
+          max-width 100%
+          margin 0
+    .object-meta
       position relative
-      left -2px
+      width 39.9%
+      padding 40px 5%
+      border-bottom 1px solid color-libre-objet
+      ul
+        padding 0
+      li
+        display block
+        span
+          color gray
+    .object-content
+      position relative
+      width 39.9%
+      padding 40px 5%
+
       .download
         a
           border-right 1px solid color-libre-objet
@@ -175,10 +182,13 @@ header
     font bold 25px\/1.3em Raleway, arial, sans-serif
     &:first-child
       margin-top 0
+  ul
+    padding-left 0
+    margin 5px 0
   li
     list-style-type none
-    margin 0 0 20px 0px
-    padding 0 0 0px 40px
+    margin 10px 0
+    padding 0 0 0px 20px
     display block
     position relative
     &:before
@@ -189,13 +199,13 @@ header
       top 0
       left 0
   em
-    color grey
+    color gray
   pre
     background-color #E3E3E3
-    padding 20px
+    padding 20px 30px
     font-family mono
     font-weight normal
-    line-height 25px
+    font-size 0.95em
 
 .pagination
   margin 20px 20px 0 20px
