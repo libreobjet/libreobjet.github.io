@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('image_mignifier', ['image_resize', 'imagemin']);
   grunt.registerTask('default', ['stylus', 'jekyll:serve']);
-  grunt.registerTask('build', ['stylus', 'jekyll:dist', 'zip-objects'] );
+  grunt.registerTask('build', ['stylus', 'jekyll:dist', 'image_mignifier', 'zip-objects'] );
   grunt.registerTask('deploy', ['build', 'buildcontrol']);
 
 };
