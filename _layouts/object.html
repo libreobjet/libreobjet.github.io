@@ -18,7 +18,7 @@
               {%  if page_folder[1] == file_folder[2] %}
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
-                {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".svg" or file.extname == ".gif" %}
+                {% if file.extname == ".jpg" or file.extname == ".png" or file.extname == ".gif" %}
                   <li><img src="{{ relative }}{{ source }}" alt="{{ name }}"/></li>
                 {% endif %}
               {% endif%}
@@ -32,7 +32,7 @@
               {%  if page_folder[1] == file_folder[2] %}
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
-                {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".svg" and file.extname != ".gif" %}
+                {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".gif" %}
                   <li><a href="{{ relative }}{{ source }}">{{ name }}</a></li>
                 {% endif %}
               {% endif%}
