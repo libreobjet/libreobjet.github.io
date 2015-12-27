@@ -1,0 +1,3 @@
+[submodule "_objects/uhbench"]
+	path = _objects/uhbench
+	url = https://github.com/xuv/uhbench.git
