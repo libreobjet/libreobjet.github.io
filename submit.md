@@ -23,31 +23,32 @@ This is a suggested directory structure. We're trying to be as flexible as possi
   - images/ *Images, photographs and drawings*
     - thumb.png *One of your images must be named “thumb” or "cover", it will the featured image of your project*
   - project.md *The only .md file, see “Content of the .md file below”*
-  - guide-fr.pdf *Language must be defined ex. guide-en.pdf*
+  - guide-fr.pdf *If the guide is written in a particular language, it must be defined in the file name. Ex: guide-en.pdf*
 
 ## Content of the .md file
 
-The .md file describes the object in details with a markdown syntax.
-Copy paste the text below and fill in the gaps.
+The `project.md` file describes the object in details with a markdown syntax.
+Copy paste the text below and fill in the gaps where it is necessary.
+Leave blank if it's not relevant for your project.
 ```
 ---
-object_name: # Obviously, the object name
-designer: #full name of the designer(s)
-builder: #full name of builder(s) [Miguel Van Steenbrugge, Mr Builder, Another Builder]
-category: Side Table & Bookstand
-tags: # a list of tags
-overall_size: # overall size of the object ex: 830 x 400 x 410 mm
-creation_date: # Creation date in the form o YYYY-MM-DD
-contributors: # list of contributors
-derived_from: # Name of the object it was derived from (in case of remixes)
-original_designer: # Name of the previous designers (in case of remixes)
-realisation_place: # Location where teh object was created
-required_hardware: # list of tools necessary for construction ex: [Drill, Screw Driver, Saw]
+object_name: # The unique object name
+designer: # Full name(s) of the designer(s)
+builder: # Full name(s) of builder(s) [Miguel Van Steenbrugge, Mr Builder, Another Builder]
+category: # Category of the object. See other objects for inspiration
+tags: # A list of tags
+overall_size: # Overall size of the object ex: 830 x 400 x 410 mm
+creation_date: # Creation date in the form of YYYY-MM-DD
+contributors: # List of contributors
+derived_from: # Name of the object(s) it was derived from (in case of remixes)
+original_designer: # Name of the previous designer(s) (in case of remixes)
+realisation_place: # Location where the object was created
+required_hardware: # List of tools necessary for construction ex: [Drill, Screw Driver, Saw]
 materials: # List of materials
 license: # Name of the license
 client: # Name(s) of the client
 ---
-Write freely about the object. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.
+Write freely about the object. Be descriptive about your intentions and choices. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.
 
 Write here using the [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, make links and lists.
 
