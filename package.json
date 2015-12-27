@@ -18,6 +18,7 @@
     "grunt-jekyll" : "~0.4.2",
     "grunt-contrib-compress" : "~0.14.0",
     "grunt-contrib-imagemin": "~1.0.0",
-    "grunt-image-resize": "~1.0.0"
+    "grunt-image-resize": "~1.0.0",
+    "grunt-contrib-htmlmin": "~0.6.0"
   }
 }

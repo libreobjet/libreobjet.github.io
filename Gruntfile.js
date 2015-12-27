@@ -81,6 +81,20 @@ module.exports = function(grunt) {
           dest: '_site/objects/'
         }]
       }
+    },
+    htmlmin: {                                     // Task
+      dist: {                                      // Target
+        options: {                                 // Target options
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: '_site/',
+          src: ['**/*.{html,htm}'],
+          dest: '_site/'
+        }]
+      }
     }
   });
 
@@ -107,6 +121,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-build-control');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-image-resize');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.registerTask('zip-objects', 'Zip all the objects folders', function(){
     grunt.dynamicCompress('_objects');
@@ -114,8 +129,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('image_mignifier', ['image_resize', 'imagemin']);
-  grunt.registerTask('default', ['stylus', 'jekyll:serve']);
-  grunt.registerTask('build', ['stylus', 'jekyll:dist', 'image_mignifier', 'zip-objects'] );
+  grunt.registerTask('default', ['stylus', 'jekyll:serve'] );
+  grunt.registerTask('build', ['stylus', 'jekyll:dist', 'htmlmin', 'image_mignifier', 'zip-objects'] );
   grunt.registerTask('deploy', ['build', 'buildcontrol']);
 
 };
