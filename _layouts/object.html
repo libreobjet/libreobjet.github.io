@@ -35,8 +35,8 @@
       <div class="object-meta">
         <ul>
           {% if page.object_name %}<li><span class="label">Name:</span> {{ page.object_name }}</li>{% endif %}
-          {% if page.designer %}<li><span class="label">Designer{% if page.designer.size > 1 %}s{% endif %}:</span> {% for designer in page.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
-          {% if page.builder %}<li><span class="label">Builder{% if page.builder.size > 1 %}s{% endif %}:</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.designer %}<li><span class="label">Designer(s):</span> {% for designer in page.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.builder %}<li><span class="label">Builder(s):</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.category %}<li><span class="label">Category:</span> {{ page.category }}</li>{% endif %}
           {% if page.tags %}<li><span class="label">Tags:</span> {% for tag in page.tags %}{{ tag }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date | date: "%B %Y" }}</li>{% endif %}
