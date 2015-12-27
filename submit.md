@@ -5,10 +5,10 @@ layout: default
 You can submit your design to the Libre Objet’s team by [email](mailto:hello@libreobjet.org).
 Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and do a pull request. To be published on the website, be sure it matches the following requirements:
 
-- Include all 3D (SKP, IGES, STL, STEP, DAE, OBJ) and/or 2D (DXF, SVG, EPS) sources files to build the object. We do prefer and encourage the use of standard open formats.
+- Include all 3D (SKP, IGES, STL, STEP, DAE, OBJ, BLEND) and/or 2D (DXF, SVG, EPS) sources files to build the object. We do prefer and encourage the use of open standards file formats.
 - A markdown file (preferably called project.md) that describes the object. See documentation below for an example.
-- A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the [Bouctje’s dowload archive](http://libreobjet.org/objects/bouctje/).
-- A txt file containing the license. If you need help to choose a license, refer to the [dedicated page](http://libreobjet.org/licenses/)
+- A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the [Bouctje’s download archive](http://libreobjet.org/objects/bouctje/).
+- A plain text file containing the license (and aptly named license.txt). If you need help to choose a license, refer to the [dedicated page](http://libreobjet.org/licenses/)
 - One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.
 
 ## Directory architecture
