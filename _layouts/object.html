@@ -35,13 +35,26 @@
       <div class="object-meta">
         <ul>
           {% if page.object_name %}<li><span class="label">Name:</span> {{ page.object_name }}</li>{% endif %}
-          {% if page.designer %}<li><span class="label">Designer{% if page.designer.quantity > 1 %}s{% endif %}:</span> {% for designer in page.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
-          {% if page.builder %}<li><span class="label">Builder{% if page.builder.quantity > 1 %}s{% endif %}:</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.designer %}<li><span class="label">Designer{% if page.designer.size > 1 %}s{% endif %}:</span> {% for designer in page.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.builder %}<li><span class="label">Builder{% if page.builder.size > 1 %}s{% endif %}:</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.category %}<li><span class="label">Category:</span> {{ page.category }}</li>{% endif %}
           {% if page.tags %}<li><span class="label">Tags:</span> {% for tag in page.tags %}{{ tag }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date | date: "%B, %Y" }}</li>{% endif %}
           {% if page.contributors %}<li><span class="label">Contributors:</span> {{ page.contributors }}</li>{% endif %}
-          {% if page.derived_from %}<li><span class="label">Derived from:</span> {{ page.derived_from }}</li>{% endif %}
+          {% if page.derived_from %}
+          <li>
+            <span class="label">Derived from:</span>
+            {% for original in page.derived_from %}
+              {% assign derived = null %}
+              {% for obj in site.objects %}
+                  {% if obj.object_name == original %}
+                    {% assign derived = obj %}
+                  {% endif%}
+              {% endfor %}
+              {% if derived != null %}<a href="{{ relative }}{{ derived.url | remove_first:"_" }}">{{ original }}</a>{% else %}{{ original }}{% endif %}{% if forloop.last %}{% else %}, {% endif %}
+            {% endfor %}
+          </li>
+          {% endif %}
           {% if page.realisation_place %}<li><span class="label">Location:</span> {{ page.realisation_place }}</li>{% endif %}
           {% if page.required_hardware %}<li><span class="label">Required hardware:</span> {% for hw in page.required_hardware %}{{ hw }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.license %}<li><span class="label">License:</span> {{ page.license }}</li>{% endif %}
