@@ -39,7 +39,7 @@
           {% if page.builder %}<li><span class="label">Builder{% if page.builder.size > 1 %}s{% endif %}:</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.category %}<li><span class="label">Category:</span> {{ page.category }}</li>{% endif %}
           {% if page.tags %}<li><span class="label">Tags:</span> {% for tag in page.tags %}{{ tag }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
-          {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date | date: "%B, %Y" }}</li>{% endif %}
+          {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date | date: "%B %Y" }}</li>{% endif %}
           {% if page.contributors %}<li><span class="label">Contributors:</span> {{ page.contributors }}</li>{% endif %}
           {% if page.derived_from %}
           <li>
