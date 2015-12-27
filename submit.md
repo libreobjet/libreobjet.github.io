@@ -33,10 +33,10 @@ Leave blank if it's not relevant for your project.
 ```
 ---
 object_name: # The unique object name
-designer: # Full name(s) of the designer(s)
-builder: # Full name(s) of builder(s) [Miguel Van Steenbrugge, Mr Builder, Another Builder]
+designer: # Full name(s) of the designer(s). Ex: [Designer one, Designer two]
+builder: # Full name(s) of builder(s). Ex: [Builder one, Builder two]
 category: # Category of the object. See other objects for inspiration
-tags: # A list of tags
+tags: # A list of tags. Ex: [tag1, tag2, tag3]
 overall_size: # Overall size of the object ex: 830 x 400 x 410 mm
 creation_date: # Creation date in the form of YYYY-MM-DD
 contributors: # List of contributors
