@@ -48,7 +48,7 @@ header
 
 
 // Object
-.object-meta, pre
+.content.single .object-meta, pre
   font-family mono
   font-size 13px
   font-weight normal
@@ -60,7 +60,7 @@ header
     .object-image
       float left
       border-right 1px solid color-libre-objet
-      width 501px
+      width 500px
       height auto
       &.noimage
         height 300px
@@ -75,8 +75,6 @@ header
           border-bottom 1px solid color-libre-objet
       img
         display block
-    .object-meta
-      float left
     .object-content
       float left
       border-bottom 1px solid color-libre-objet
@@ -98,13 +96,15 @@ header
   .object-box
     .object-meta
       padding 0
-      width calc(100% \- 600px)
+      width 100%
       .object-name
-        margin 130px 0 80px 80px
+        margin 130px 0 1em 80px
         font fat
         text-align center
-      .object-designer
-        display none
+      .data
+        text-align center
+        .license
+          font-weight normal
 
 // Object in single page
 .content.single

@@ -51,12 +51,12 @@
             <div class="object-name">
               <a href="{{ relative }}{{ object.url}}">{{ object.object_name }}</a>
             </div>
-            {% if object.designer %}
-              <div class="object-designer">By {% for designer in object.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</div>
-            {% endif %}
-            {% if object.derived_from %}
-              <div class="object-derived">Derived from {% for obj in object.derived_from %}{{ obj }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</div>
-            {% endif %}
+            <div class="data">
+              {% if object.designer %}
+                {% for designer in object.designer %}{% if forloop.length > 1 %}{% if forloop.last %} &amp; {{ designer }}{% else %}{% if forloop.first %}{% else %}, {% endif %}{{ designer }}{% endif %}{% else %}{{ designer }}{% endif %}{% endfor %}
+              {% endif %}<br>
+              {% if object.license %}<span class="license">{{ object.license }}</span>{% endif %}
+            </div>
           </div>
         </div>
       {% endif %}
