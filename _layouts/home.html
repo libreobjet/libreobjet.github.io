@@ -7,7 +7,8 @@
     <div class="highlight">
     {% if page.title %}{{ page.title }}{% else %}{{ site.moto }}{% endif %}
     </div>
-    {% for object in site.objects %}
+    {% assign object_list = (site.objects | sort: 'creation_date' | reverse ) %}
+    {% for object in object_list %}
       {% assign obj_name = object.url | split:"/" | last %}
       {% if obj_name != "index.html" %}
         <div class="object-box">
@@ -51,7 +52,10 @@
               <a href="{{ relative }}{{ object.url}}">{{ object.object_name }}</a>
             </div>
             {% if object.designer %}
-              <div class="object-designer">By {% for designer in object.designer %}{{ designer }} {% endfor %}</div>
+              <div class="object-designer">By {% for designer in object.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</div>
+            {% endif %}
+            {% if object.derived_from %}
+              <div class="object-derived">Derived from {% for obj in object.derived_from %}{{ obj }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</div>
             {% endif %}
           </div>
         </div>
