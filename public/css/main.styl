@@ -48,36 +48,39 @@ header
 
 
 // Object
+.object-meta
+  font-family mono
+  font-size 13px
+  font-weight normal
 
-.object-box
-  clearfix()
-  border-bottom 1px solid color-libre-objet
-  .object-image
-    float left
-    border-right 1px solid color-libre-objet
-    width 501px
-    height auto
-    &.noimage
-      height 300px
-      &::after
-        content " "
-        display block
-        transform rotate(-31deg)
-        position relative
-        top 149px
-        left -41px
-        width 583px
-        border-bottom 1px solid color-libre-objet
-    img
-      display block
-  .object-meta
-    float left
-    font-family mono
-    font-size 13px
-    font-weight normal
-  .object-content
-    float left
+.content.list
+  .object-box
+    clearfix()
     border-bottom 1px solid color-libre-objet
+    .object-image
+      float left
+      border-right 1px solid color-libre-objet
+      width 501px
+      height auto
+      &.noimage
+        height 300px
+        &::after
+          content " "
+          display block
+          transform rotate(-31deg)
+          position relative
+          top 149px
+          left -41px
+          width 583px
+          border-bottom 1px solid color-libre-objet
+      img
+        display block
+    .object-meta
+      float left
+    .object-content
+      float left
+      border-bottom 1px solid color-libre-objet
+
 .single
   .highlight
     background white
@@ -104,16 +107,15 @@ header
         display none
 
 // Object in single page
-
 .content.single
   .object-box
-    .images
+    .object-images
       float left
+      width 50%
+    .images
       list-style-type none
       margin 0
       padding 0
-      width 50%
-      border-right 1px solid color-libre-objet
       li
         margin 0
         padding 0
@@ -121,50 +123,47 @@ header
           display block
           max-width 100%
           margin 0
-    .object-meta
-      position relative
-      width 39.9%
-      padding 40px 5%
+    .object-data
+      border-left 1px solid color-libre-objet
       border-bottom 1px solid color-libre-objet
-      ul
-        padding 0
-      li
-        display block
-        span
-          color gray
-
-    .object-content
       position relative
-      width 39.9%
-      padding 40px 5%
-      .dlintro
-        margin 30px 0px
-
-    .download
-      border-bottom 1px solid color-libre-objet
-      text-align center
       width 49.9%
       float left
-      a
-        background #00bd00
-        color white
-        font-size 2em
-        width 100%
-        display block
-        padding 1em 0
-      a:hover
-        background white
-        color color-libre-objet
-        border-bottom none
-    .object-files
-      position relative
-      width 39.9%
-      float left
-      padding 20px 5%
-      .files
-        padding 0 0 0 1em
-        list-style-type square
-        font-weight normal
+      .object-meta
+        padding 40px 10%
+        border-bottom 1px solid color-libre-objet
+        ul
+          padding 0
+        li
+          display block
+          span
+            color gray
+      .object-content
+        clear both
+        padding 40px 10%
+        border-bottom 1px solid color-libre-objet
+        ul
+          padding-left 1em
+      .object-download
+        border-bottom 1px solid color-libre-objet
+        text-align center
+        a
+          background #00bd00
+          color white
+          font-size 2em
+          width 100%
+          display block
+          padding 1em 0
+        a:hover
+          background white
+          color color-libre-objet
+          border-bottom none
+      .object-files
+        padding 20px 10%
+        .files
+          padding 0 0 0 1em
+          list-style-type square
+          font-weight normal
 // Search page
 
 .content.search
