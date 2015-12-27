@@ -1,130 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Submit an object</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
-
-  
-  
-
-  <link rel="canonical" href="http://libreobjet.org/submit.html">
-  <link rel="alternate" type="application/rss+xml" title="Libre Objet" href="http://libreobjet.org/feed.xml">
-
-  <link href="./public/css/fonts/stylesheet.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./public/css/normalize.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="./public/css/main.css" type="text/css" media="screen">
-</head>
-
-<body>
-  <header>
-    <h1>
-      <a class="brand" href="./index.html">
-        <img class="logo" src="./public/img/libreobjet-logo-5.svg" alt="Libre Objet logo" title="Home page" />
-      </a>
-    </h1>
-
-      <ul class="nav">
-        <li><a href="./objects/index.html">Objects</a></li>
-        <li><a href="./submit.html">Submit an object</a></li>
-        <li><a href="./licenses.html">Choose a license</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="http://books.libreobjet.org/">Books</a></li>
-        <li><a href="http://blog.libreobjet.org/">Blog</a></li>
-      </ul>
-
-  </header>
-
-  <div class="container content">
-    <div class="highlight">
-    Submit an object
-    </div>
-    <div class="textonly">
-    <p>You can submit your design to the Libre Objet’s team by <a href="mailto:hello@libreobjet.org">email</a>.
-Advanced users can fork the <a href="https://github.com/libreobjet/libreobjet.org">project on GitHub</a>, add an object and do a pull request. To be published on the website, be sure it matches the following requirements:</p>
-
-<ul>
-<li>Include all 3D (SKP, IGES, STL, STEP, DAE, OBJ) and/or 2D (DXF, SVG, EPS) sources files to build the object. We do prefer and encourage the use of standard open formats.</li>
-<li>A markdown file (preferably called project.md) that describes the object. See documentation below for an example.</li>
-<li>A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the <a href="http://libreobjet.org/objects/bouctje/">Bouctje’s dowload archive</a>.</li>
-<li>A txt file containing the license. If you need help to choose a license, refer to the <a href="http://libreobjet.org/licenses/">dedicated page</a></li>
-<li>One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.</li>
-</ul>
-
-
-<h2>Directory architecture</h2>
-
-<p>This is a suggested directory structure. We're trying to be as flexible as possible. The only thing really mandatory are a folder named according to the project and that contains source files, pictures and a markdown file with a description and some meta-data.</p>
-
-<ul>
-<li>name-of-the-project/ <em>The name of your project, no spaces, capital, neither special characters</em>
-
-<ul>
-<li>sources/ <em>Subfolder suggestion to keeps things tidy</em>
-
-<ul>
-<li>3d/ <em>3D source files</em></li>
-<li>2d/ <em>2D source files</em></li>
-<li>guide/ <em>Source files for the pdf guide</em></li>
-<li>LICENSE.txt <em>Contains the chosen license text</em></li>
-</ul>
-</li>
-<li>images/ <em>Images, photographs and drawings</em>
-
-<ul>
-<li>thumb.png <em>One of your images must be named “thumb” or "cover", it will the featured image of your project</em></li>
-</ul>
-</li>
-<li>project.md <em>The only .md file, see “Content of the .md file below”</em></li>
-<li>guide-fr.pdf <em>Language must be defined ex. guide-en.pdf</em></li>
-</ul>
-</li>
-</ul>
-
-
-<h2>Content of the .md file</h2>
-
-<p>The .md file describes the object in details with a markdown syntax.
-Copy paste the text below and fill in the gaps.</p>
-
-<pre><code>---
-object_name: # Obviously, the object name
-designer: #full name of the designer(s)
-builder: #full name of builder(s) [Miguel Van Steenbrugge, Mr Builder, Another Builder]
-category: Side Table &amp; Bookstand
-tags: # a list of tags
-overall_size: # overall size of the object ex: 830 x 400 x 410 mm
-creation_date: # Creation date in the form o YYYY-MM-DD
-contributors: # list of contributors
-derived_from: # Name of the object it was derived from (in case of remixes)
-original_designer: # Name of the previous designers (in case of remixes)
-realisation_place: # Location where teh object was created
-required_hardware: # list of tools necessary for construction ex: [Drill, Screw Driver, Saw]
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Submit an object</title><meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu..."><link rel="canonical" href="http://libreobjet.org/submit.html"><link rel="alternate" type="application/rss+xml" title="Libre Objet" href="http://libreobjet.org/feed.xml"><link href="./public/css/fonts/stylesheet.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="./public/css/normalize.css" type="text/css" media="screen"><link rel="stylesheet" href="./public/css/main.css" type="text/css" media="screen"></head><body><header><h1><a class="brand" href="./index.html"><img class="logo" src="./public/img/libreobjet-logo-5.svg" alt="Libre Objet logo" title="Home page"></a></h1><ul class="nav"><li><a href="./objects/index.html">Objects</a></li><li><a href="./submit.html">Submit an object</a></li><li><a href="./licenses.html">Choose a license</a></li><li><a href="./about.html">About</a></li><li><a href="http://books.libreobjet.org/">Books</a></li><li><a href="http://blog.libreobjet.org/">Blog</a></li></ul></header><div class="container content"><div class="highlight">Submit an object</div><div class="textonly"><p>You can submit your design to the Libre Objet’s team by <a href="mailto:hello@libreobjet.org">email</a>. Advanced users can fork the <a href="https://github.com/libreobjet/libreobjet.org">project on GitHub</a>, add an object and do a pull request. To be published on the website, be sure it matches the following requirements:</p><ul><li>Include all 3D (IGES, STL, DAE, OBJ, BLEND, STEP, SKP, 3DS, MAYA,…) and/or 2D (DXF, SVG, EPS, ODG, DWG, AI,…) source files to build the object. We do prefer and encourage the use of open standards file formats.</li><li>A markdown file (preferably called project.md) that describes the object. See documentation below for an example.</li><li>A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the <a href="http://libreobjet.org/objects/bouctje/">Bouctje’s download archive</a>.</li><li>A plain text file containing the license (and aptly named license.txt). If you need help to choose a license, refer to the <a href="http://libreobjet.org/licenses/">dedicated page</a></li><li>One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.</li></ul><h2>Directory architecture</h2><p>This is a suggested directory structure. We're trying to be as flexible as possible. The only thing really mandatory are a folder named according to the project and that contains source files, pictures and a markdown file with a description and some meta-data.</p><ul><li>name-of-the-project/ <em>The name of your project, no spaces, capital, neither special characters</em><ul><li>sources/ <em>Subfolder suggestion to keeps things tidy</em><ul><li>3d/ <em>3D source files</em></li><li>2d/ <em>2D source files</em></li><li>guide/ <em>Source files for the pdf guide</em></li><li>LICENSE.txt <em>Contains the chosen license text</em></li></ul></li><li>images/ <em>Images, photographs and drawings</em><ul><li>thumb.png <em>One of your images must be named “thumb” or "cover", it will the featured image of your project</em></li></ul></li><li>project.md <em>The only .md file, see “Content of the .md file below”</em></li><li>guide-fr.pdf <em>If the guide is written in a particular language, it must be defined in the file name. Ex: guide-en.pdf</em></li></ul></li></ul><h2>Content of the .md file</h2><p>The <code>project.md</code> file describes the object in details with a markdown syntax. Copy paste the text below and fill in the gaps where it is necessary. Leave blank if it's not relevant for your project.</p><pre><code>---
+object_name: # The unique object name
+designer: # Full name(s) of the designer(s). Ex: [Designer one, Designer two]
+builder: # Full name(s) of builder(s). Ex: [Builder one, Builder two]
+category: # Category of the object. See other objects for inspiration
+tags: # A list of tags. Ex: [tag1, tag2, tag3]
+overall_size: # Overall size of the object ex: 830 x 400 x 410 mm
+creation_date: # Creation date in the form of YYYY-MM-DD
+contributors: # List of contributors
+derived_from: # Name of the object(s) it was derived from (in case of remixes)
+original_designer: # Name of the previous designer(s) (in case of remixes)
+realisation_place: # Location where the object was created
+required_hardware: # List of tools necessary for construction ex: [Drill, Screw Driver, Saw]
 materials: # List of materials
 license: # Name of the license
 client: # Name(s) of the client
 ---
-Write freely about the object. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.
+Write freely about the object. Be descriptive about your intentions and choices. You might want to answer questions like: Why was it created? For what purpose? How is it best used or done? In case of derivatives, what is different from the previous versions? etc.
 
 Write here using the [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, make links and lists.
 
 Leave a blank line to begin a new paragraph.
-</code></pre>
-
-    </div>
-  </div>
-      <footer>
-        <span class"source">Website source <a href="https://github.com/libreobjet/libreobjet.org">on GitHub</a></span>   |
-        <span class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></span>
-      </footer>
-    </div><!--  end #container-->
-    <script src="./public/js/jquery-1.10.2.min.js"></script>
-    <script src="./public/js/main.js"></script>
-  </body>
-</html>
-
-</body>
-</html>
+</code></pre></div></div><footer><span class="source">Website source <a href="https://github.com/libreobjet/libreobjet.org">on GitHub</a></span> | <span class="rss-subscribe">subscribe <a href="http://libreobjet.org/feed.xml">via RSS</a></span></footer><script src="./public/js/jquery-1.10.2.min.js"></script><script src="./public/js/main.js"></script></body></html>
