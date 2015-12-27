@@ -4,5 +4,6 @@
 .sass-cache
 _site/
 _plugins/
+public/css/main.css
 
 node_modules/
