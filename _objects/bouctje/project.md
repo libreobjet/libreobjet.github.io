@@ -4,7 +4,7 @@ designer: Mathieu Gabiot
 builder: Mathieu Gabiot
 category: bookcase
 tags: wood
-creation_date: 01-2013
+creation_date: 2013-01-01
 overall_size:
 contributors:
 derived_from:
