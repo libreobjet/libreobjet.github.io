@@ -77,8 +77,7 @@ header
     font-weight normal
   .object-content
     float left
-    .download
-      margin-bottom 20px
+    border-bottom 1px solid color-libre-objet
 .single
   .highlight
     background white
@@ -133,26 +132,39 @@ header
         display block
         span
           color gray
+
     .object-content
       position relative
       width 39.9%
       padding 40px 5%
-
-      .download
-        a
-          border-right 1px solid color-libre-objet
-          border-bottom 1px solid color-libre-objet
-          padding 30px 70px
-          color color-libre-objet
-          position relative
-          top -13px
-          left -40px
-          &:hover
-            color white
-            background color-libre-objet
       .dlintro
         margin 30px 0px
 
+    .download
+      border-bottom 1px solid color-libre-objet
+      text-align center
+      width 49.9%
+      float left
+      a
+        background #00bd00
+        color white
+        font-size 2em
+        width 100%
+        display block
+        padding 1em 0
+      a:hover
+        background white
+        color color-libre-objet
+        border-bottom none
+    .object-files
+      position relative
+      width 39.9%
+      float left
+      padding 20px 5%
+      .files
+        padding 0 0 0 1em
+        list-style-type square
+        font-weight normal
 // Search page
 
 .content.search

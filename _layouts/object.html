@@ -29,37 +29,21 @@
               {% endif%}
             {% endfor %}
           </ul>
-          <!--
-          <ul class="data">
-            {% for file in collection.files %}
-              {% assign page_folder = page.path | split:"/" %}
-              {% assign file_folder = file.path | split:"/" %}
-              {%  if page_folder[1] == file_folder[2] %}
-                {% assign source = file.path | remove_first:"_" %}
-                {% assign name = source | split:"/" | last %}
-                {% if file.extname != ".jpg" and file.extname != ".png" and file.extname != ".gif" and
-                      file.extname != ".JPG" and file.extname != ".PNG" and file.extname != ".GIF" %}
-                  <li><a href="{{ relative }}{{ source }}">{{ name }}</a></li>
-                {% endif %}
-              {% endif%}
-            {% endfor %}
-          </ul>
-        -->
           {%  endif %}
         {% endfor %}
       </div>
       <div class="object-meta">
         <ul>
           {% if page.object_name %}<li><span class="label">Name:</span> {{ page.object_name }}</li>{% endif %}
-          {% if page.designer %}<li><span class="label">Designer(s):</span> {% for designer in page.designer %}{{ designer }} {% endfor %}</li>{% endif %}
-          {% if page.builder %}<li><span class="label">Builder(s):</span> {% for builder in page.builder %}{{ builder }} {% endfor %}</li>{% endif %}
+          {% if page.designer %}<li><span class="label">Designer{% if page.designer.quantity > 1 %}s{% endif %}:</span> {% for designer in page.designer %}{{ designer }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.builder %}<li><span class="label">Builder{% if page.builder.quantity > 1 %}s{% endif %}:</span> {% for builder in page.builder %}{{ builder }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.category %}<li><span class="label">Category:</span> {{ page.category }}</li>{% endif %}
-          {% if page.tags %}<li><span class="label">Tags:</span> {% for tag in page.tags %}{{ tag }} {% endfor %}</li>{% endif %}
-          {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date }}</li>{% endif %}
+          {% if page.tags %}<li><span class="label">Tags:</span> {% for tag in page.tags %}{{ tag }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
+          {% if page.creation_date %}<li><span class="label">Created:</span> {{ page.creation_date | date: "%B, %Y" }}</li>{% endif %}
           {% if page.contributors %}<li><span class="label">Contributors:</span> {{ page.contributors }}</li>{% endif %}
           {% if page.derived_from %}<li><span class="label">Derived from:</span> {{ page.derived_from }}</li>{% endif %}
           {% if page.realisation_place %}<li><span class="label">Location:</span> {{ page.realisation_place }}</li>{% endif %}
-          {% if page.required_hardware %}<li><span class="label">Required hardware:</span> {% for hw in page.required_hardware %}{{ hw }} {% endfor %}</li>{% endif %}
+          {% if page.required_hardware %}<li><span class="label">Required hardware:</span> {% for hw in page.required_hardware %}{{ hw }}{% if forloop.last%}{% else %}, {% endif %}{% endfor %}</li>{% endif %}
           {% if page.license %}<li><span class="label">License:</span> {{ page.license }}</li>{% endif %}
           {% if page.client %}<li><span class="label">Client:</span> {{ page.client }}</li>{% endif %}
         </ul>
@@ -67,11 +51,30 @@
       <div class="object-content">
         {{ content }}
       </div>
-      <div>
+      <div class="download">
         {% assign folder_name = page.url | split:"/" %}
-        <p class="download"><a href="{{ folder_name[2] }}.zip">Download</a></p>
+        <a href="{{ folder_name[2] }}.zip">Download</a>
       </div>
-    </div>
+      <div class="object-files">
+        <p>List of files in the .zip folder available for download.</p>
+        {% for collection in site.collections %}
+          {% if collection.label == 'objects' %}
+          <ul class="files">
+            {% for file in collection.files %}
+              {% assign page_folder = page.path | split:"/" %}
+              {% assign file_folder = file.path | split:"/" %}
+              {%  if page_folder[1] == file_folder[2] %}
+                {% assign source = file.path | remove_first:"_" %}
+                {% assign name = source | split:"/" | last %}
+                <li>
+                  {% for item in file_folder offset:3 %}{{ item }}{% if forloop.last %}{% else %}/{% endif %}{% endfor%}
+                </li>
+              {% endif%}
+            {% endfor %}
+          </ul>
+          {%  endif %}
+        {% endfor %}
+      </div>
   </div>
 {% include footer.html %}
 </body>
