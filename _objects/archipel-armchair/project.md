@@ -4,12 +4,12 @@ designer: Mathieu Gabiot
 builder: Mathieu Gabiot
 category: armchair
 tags: wood
-creation_date: 08-2011
+creation_date: 2011-08-01
 contributors:
 derived_from:
 realisation_place: Brussels
 required_hardware: [hand saw, circular saw, drill driver, drill bit 3mm, sander, sand paper]
-license: Free Art Licence
+license: Free Art License
 client: La Mediathèque - Brussels
 ---
 
