@@ -6,6 +6,8 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 
+  {% include favicon.html %}
+
   {% assign lvl = page.url | append:'X' | split:'/' | size %}
   {% capture relative %}{%if lvl >= 3 %}{% for i in (3..lvl) %}{% if forloop.last %}..{% else %}../{% endif %}{% endfor %}{% else %}.{% endif %}{% endcapture %}
 
