@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Libre Objet</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>A curated list of libre objects. A collective of industrial designers and artists sharing a common question around open source design, processes and products.
 </description>
     <link>http://libreobjet.org/</link>
     <atom:link href="http://libreobjet.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Dec 2015 18:53:36 -0500</pubDate>
-    <lastBuildDate>Sun, 27 Dec 2015 18:53:36 -0500</lastBuildDate>
+    <pubDate>Mon, 28 Dec 2015 22:14:33 -0500</pubDate>
+    <lastBuildDate>Mon, 28 Dec 2015 22:14:33 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
   </channel>
