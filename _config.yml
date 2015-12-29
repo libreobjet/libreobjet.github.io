@@ -22,7 +22,7 @@ github_username:  libreobjet
 # Build settings
 markdown: rdiscount #redcarpet #kramdown
 
-exclude: ['node_modules', 'Gruntfile.js', 'package.json', '**/*.styl', 'README.md']
+exclude: ['node_modules', 'Gruntfile.js', 'package.json', '**/*.styl']
 keep_files: ['.git', 'README.md']
 
 # Object collection
