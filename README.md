@@ -18,12 +18,14 @@ This is the method if you want to browse locally the website (without changing i
 2. Point your browser to the index.html file at the root of the directory.
 
 ## How to {modify|adapt} this website
-This is the method if you want to add your objects, modify this website to your own liking, create your own curated repository of libre objects.
+This is the method if you want to add your objects, modify this website to your own liking, create your own curated repository of _libre_ objects.
 
 1. Clone the [`source` branch](https://github.com/libreobjet/libreobjet.github.io/tree/source) of this repository
-2. Have Jekyll installed on your system.
-3. Modify files and folders
-4. Run `jekyll serve`
+2. Have Jekyll and Grunt installed on your system.
+3. `npm install` should install all the latest components. You might need some gems depending on the Jekyll plugin in use.
+4. Modify files and folders
+5. Run `grunt` to test locally.
+6. Run `grunt deploy` to push the website on Github in the right branches using similar approach described by [David Ensinger](http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/).
 
 ## License
-All website content is under [Free Art License](http://artlibre.org/licence/lal/en), except if stated otherwise.
+Except if stated otherwise (especially what's in the `_object` folder), all website content is under [Free Art License](http://artlibre.org/licence/lal/en).
