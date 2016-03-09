@@ -2,8 +2,12 @@
 title: Submit an object
 layout: default
 ---
-You can submit your design to the Libre Objet’s team by [email](mailto:hello@libreobjet.org).
-Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and do a pull request. To be published on the website, be sure it matches the following requirements:
+You can submit your design to the Libre Objet’s team by [email](mailto:hello@libreobjet.org).  
+Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and do a pull request.  
+We encourage you to have your own git repository for your object. We will then add it as a git submodules in our website source.
+So development can still happen on your projectc%, others can easily build on it and we will always be able to get the latest updates from it.
+
+To be published on the website, be sure it matches the following requirements:
 
 - Include all 3D (IGES, STL, DAE, OBJ, BLEND, STEP, SKP, 3DS, MAYA,…) and/or 2D (DXF, SVG, EPS, ODG, DWG, AI,…) source files to build the object. We do prefer and encourage the use of open standards file formats.
 - A markdown file (preferably called project.md) that describes the object. See documentation below for an example.
