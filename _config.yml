@@ -15,7 +15,7 @@ description: > #
   A curated list of libre objects.
   A collective of industrial designers and artists sharing a common question around open source design, processes and products.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://libreobjet.org" # the base hostname & protocol for your site
+url: //libreobjet.org # the base hostname & protocol for your site
 twitter_username: libreobjet
 github_username:  libreobjet
 
