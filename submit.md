@@ -3,7 +3,7 @@ title: Submit an object
 layout: default
 ---
 You can submit your design to the Libre Objet’s team by [email](mailto:hello@libreobjet.org).  
-Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and do a pull request.  
+Advanced users can fork the [project on GitHub](https://github.com/libreobjet/libreobjet.org), add an object and do a pull request.
 We encourage you to have your own git repository for your object. We will then add it as a git submodules in our website source.
 So development can still happen on your projectc%, others can easily build on it and we will always be able to get the latest updates from it.
 
@@ -11,8 +11,8 @@ To be published on the website, be sure it matches the following requirements:
 
 - Include all 3D (IGES, STL, DAE, OBJ, BLEND, STEP, SKP, 3DS, MAYA,…) and/or 2D (DXF, SVG, EPS, ODG, DWG, AI,…) source files to build the object. We do prefer and encourage the use of open standards file formats.
 - A markdown file (preferably called project.md) that describes the object. See documentation below for an example.
-- A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the [Bouctje’s download archive](http://libreobjet.org/objects/bouctje/).
-- A plain text file containing the license (and aptly named license.txt). If you need help to choose a license, refer to the [dedicated page](http://libreobjet.org/licenses/)
+- A step by step guide (preferably in PDF) describing how to build the object. An example can be found in the [Bouctje’s download archive](http://libreobjet.org/objects/bouctje/project.html).
+- A plain text file containing the license (and aptly named license.txt). If you need help to choose a license, refer to the [dedicated page](http://libreobjet.org/licenses.html)
 - One or many decent image(s) of the object, with at least one photo of the object being built. There can be renders, drawings, artistic impressions, technical plans, etc. but we favor things that passed the built stage.
 
 ## Directory architecture
