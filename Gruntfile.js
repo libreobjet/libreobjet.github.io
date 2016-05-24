@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:libreobjet/libreobjet.github.io.git',
+          remote: 'https://github.com/libreobjet/libreobjet.github.io.git',
           branch: 'master'
         }
       }
