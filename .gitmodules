@@ -1,3 +1,6 @@
 [submodule "_objects/uhbench"]
 	path = _objects/uhbench
 	url = https://github.com/xuv/uhbench.git
+[submodule "_objects/Archipel-Bench"]
+	path = _objects/Archipel-Bench
+	url = https://github.com/Mathieu-G/Archipel-Bench.git
