@@ -128,7 +128,8 @@ module.exports = function(grunt) {
     grunt.task.run('compress');
   });
 
-  grunt.registerTask('image_mignifier', ['image_resize', 'imagemin']);
+  //grunt.registerTask('image_mignifier', ['image_resize', 'imagemin']);
+  grunt.registerTask('image_mignifier', ['image_resize']);
   grunt.registerTask('default', ['stylus', 'jekyll:serve'] );
   grunt.registerTask('build', ['stylus', 'jekyll:dist', 'htmlmin', 'image_mignifier', 'zip-objects'] );
   grunt.registerTask('deploy', ['build', 'buildcontrol']);
