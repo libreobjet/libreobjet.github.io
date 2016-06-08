@@ -13,3 +13,6 @@
 [submodule "Archipel-Table"]
 	path = Archipel-Table
 	url = https://github.com/Mathieu-G/Archipel-Table.git
+[submodule "_objects/Archipel-Table"]
+	path = _objects/Archipel-Table
+	url = https://github.com/Mathieu-G/Archipel-Table.git
