@@ -10,3 +10,6 @@
 [submodule "_objects/Archipel-Gerrit"]
 	path = _objects/Archipel-Gerrit
 	url = https://github.com/Mathieu-G/Archipel-Gerrit.git
+[submodule "Archipel-Table"]
+	path = Archipel-Table
+	url = https://github.com/Mathieu-G/Archipel-Table.git
