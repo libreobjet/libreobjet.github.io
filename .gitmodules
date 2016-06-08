@@ -4,3 +4,6 @@
 [submodule "_objects/Archipel-Bench"]
 	path = _objects/Archipel-Bench
 	url = https://github.com/Mathieu-G/Archipel-Bench.git
+[submodule "_objects/Archipel-Side-table"]
+	path = _objects/Archipel-Side-table
+	url = https://github.com/Mathieu-G/Archipel-Side-table.git
