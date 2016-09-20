@@ -19,3 +19,6 @@
 [submodule "_objects/Mesita"]
 	path = _objects/Mesita
 	url = https://github.com/Mathieu-G/Mesita.git
+[submodule "_objects/Mobilier-Condition-Publique"]
+	path = _objects/Mobilier-Condition-Publique
+	url = https://github.com/Mathieu-G/Mobilier-Condition-Publique.git
