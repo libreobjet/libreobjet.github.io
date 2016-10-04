@@ -25,3 +25,6 @@
 [submodule "_objects/WimClips"]
 	path = _objects/WimClips
 	url = https://github.com/libreobjet/WimClips.git
+[submodule "_objects/peggy"]
+	path = _objects/peggy
+	url = https://github.com/libreobjet/peggy.git
