@@ -4,7 +4,7 @@ designer: [Quaglia Milena, Baise Elodie]
 builder: [Quaglia Milena, Baise Elodie]
 category: Showcase bookcase
 tags: wood
-Overall size: 416 x 312 x 308 mm
+overall_size: 416 x 312 x 308 mm
 creation_date: 2013-10-01
 contributors:
 derived_from: Bouctje

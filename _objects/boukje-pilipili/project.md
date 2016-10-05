@@ -4,7 +4,7 @@ designer: Gregoire Vigneron
 builder: Gregoire Vigneron
 category: bookcase
 tags: wood
-Overall size: L326 x W254 x H401 mm
+overall_size: L326 x W254 x H401 mm
 creation_date: 2013-09-22
 contributors:
 derived_from: Bouctje
