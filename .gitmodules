@@ -31,3 +31,6 @@
 [submodule "_objects/peggy"]
 	path = _objects/peggy
 	url = https://github.com/libreobjet/peggy.git
+[submodule "_objects/structure-bois"]
+	path = _objects/structure-bois
+	url = https://github.com/libreobjet/structure-bois.git
