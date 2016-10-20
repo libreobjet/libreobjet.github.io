@@ -34,3 +34,6 @@
 [submodule "_objects/structure-bois"]
 	path = _objects/structure-bois
 	url = https://github.com/libreobjet/structure-bois.git
+[submodule "bouctje"]
+	path = _objects/bouctje
+	url = https://github.com/libreobjet/bouctje.git
