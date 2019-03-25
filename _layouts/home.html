@@ -7,18 +7,18 @@
     <div class="highlight">
     {% if page.title %}{{ page.title }}{% else %}{{ site.moto }}{% endif %}
     </div>
-    {% assign object_list = (site.objects | sort: 'creation_date' | reverse ) %}
+    {% assign object_list = site.objects | sort: 'creation_date' | reverse  %}
     {% for object in object_list %}
       {% assign obj_name = object.url | split:"/" | last %}
       {% if obj_name != "index.html" %}
         <div class="object-box">
-          {% assign t = 0 %}
+          {% assign t = false %}
           {% for collection in site.collections %}
             {% if collection.label == 'objects' %}
               {% for file in collection.files %}
                 {% assign object_folder = object.path | split:"/" %}
                 {% assign file_folder = file.path | split:"/" %}
-                {%  if object_folder[1] == file_folder[2] %}
+                {%  if object_folder[1] == file_folder[1] %}
                   {% assign source = file.path | remove_first:"_" %}
                   {% assign name = source | split:"/" | last %}
                   {% if file.extname == ".jpg" or
@@ -31,10 +31,10 @@
                         file.extname == ".GIF" %}
                     {% assign source_name = name | split:"." | first | downcase %}
                     {% if source_name == "thumb" or source_name == "cover" %}
-                      {% assign t = 1 %}
+                      {% assign t = true %}
                       <div class="object-image">
                         <a href="{{ relative }}{{ object.url }}">
-                         <img src="{{ relative }}{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
+                         <img src="{{ relative }}/{{ source }}" width="500" height="auto" class="project-thumb" alt="{{ object.object_name }}">
                         </a>
                       </div>
                     {% endif %}
@@ -43,7 +43,7 @@
               {% endfor %}
             {%  endif %}
           {% endfor %}
-          {% if t == 0  %}
+          {% if t == false  %}
             <div class="object-image noimage">
             </div>
           {% endif %}

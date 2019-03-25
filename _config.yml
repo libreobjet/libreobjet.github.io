@@ -19,9 +19,6 @@ url: //libreobjet.org # the base hostname & protocol for your site
 twitter_username: libreobjet
 github_username:  libreobjet
 
-# Build settings
-markdown: rdiscount #redcarpet #kramdown
-
 exclude: ['node_modules', 'Gruntfile.js', 'package.json', '**/*.styl']
 keep_files: ['.git', 'README.md']
 

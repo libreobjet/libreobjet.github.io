@@ -15,7 +15,7 @@
             {% for file in collection.files %}
               {% assign page_folder = page.path | split:"/" %}
               {% assign file_folder = file.path | split:"/" %}
-              {%  if page_folder[1] == file_folder[2] %}
+              {%  if page_folder[1] == file_folder[1] %}
                 {% assign source = file.path | remove_first:"_" %}
                 {% assign name = source | split:"/" | last %}
                 {% if file.extname == ".jpg" or
@@ -24,7 +24,7 @@
                       file.extname == ".JPG" or
                       file.extname == ".PNG" or
                       file.extname == ".GIF" %}
-                  <li><img src="{{ relative }}{{ source }}" alt="{{ name }}"/></li>
+                  <li><img src="{{ relative }}/{{ source }}" alt="{{ name }}"/></li>
                 {% endif %}
               {% endif%}
             {% endfor %}
