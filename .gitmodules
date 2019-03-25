@@ -37,3 +37,6 @@
 [submodule "bouctje"]
 	path = _objects/bouctje
 	url = https://github.com/libreobjet/bouctje.git
+[submodule "_objects/sncbench"]
+	path = _objects/sncbench
+	url = https://github.com/libreobjet/sncbench
